@@ -38,69 +38,100 @@
         </nav>
     </header>
     <main class="page__main form">
-        <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-        <p class="page-main__paragraph">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-        <div class="form__wrapper">
-            <form action="#" method="post" target="_blank" class="form__list">
-                <fieldset class="form-list__personal">
-                    <legend class="form-list__legend">Личные данные</legend>
-                    <label for="surname" class="form-list__label">Фамилия:</label>
-                    <input type="text" name="surname" id="surname" required placeholder="Укажите фамилию&#9913;" class="personal__input">
-                    <label for="name" class="form-list__label">Имя:</label>
-                    <input type="text" name="name" id="name" required placeholder="Ведите ваше имя&#9913;" class="personal__input">
-                    <label for="patronym" class="form-list__label">Отчество:</label>
-                    <input type="text" name="patronym" id="patronym" placeholder="Ну и отчество тоже" class="personal__input">
-                </fieldset>
-                <fieldset class="form-list__checkbox">
-                    <legend class="form-list__legend">Ваши безбашенные достижения в путешествии</legend>
-                    <input type="checkbox" checked name="selfi" id="selfi" class="checkbox__input">
-                    <label for="selfi" class="checkbox__label">Сделал селфи с акулой</label>
-                    <input type="checkbox" checked name="beach" id="beach" class="checkbox__input">
-                    <label for="beach" class="checkbox__label">Обгорел на пляже</label>
-                    <input type="checkbox" name="norris" id="norris" class="checkbox__input">
-                    <label for="norris" class="checkbox__label">Видел Чака Норриса</label>
-                    <input type="checkbox" name="souvenirs" id="souvenirs" class="checkbox__input">
-                    <label for="souvenirs" class="checkbox__label">Накупил сувениров</label>
-                    <input type="checkbox" checked name="tower" id="tower" class="checkbox__input">
-                    <label for="tower" class="checkbox__label">Удержал башню</label>
-                    <input type="checkbox" name="hotel" id="hotel" class="checkbox__input">
-                    <label for="hotel" class="checkbox__label">Разгромил отель</label>
-                </fieldset>
-                <fieldset class="form-list__contacts">
-                    <legend class="form-list__legend">Контакты</legend>
-                    <label for="phone" class="form-list__label">Номер телефона</label>
-                    <input type="tel" name="phone" id="phone" pattern="8[0-9]{3}-[0-9]{7}" placeholder="Номер, пожалуйста" class="contacts__input">
-                    <label for="email" class="form-list__label">Адрес почты</label>
-                    <input type="email" name="email" id="email" required placeholder="Введите почту&#9913;" class="contacts__input">
-                </fieldset>
-                <fieldset class="form-list__apps">
-                    <legend class="form-list__legend">С каким приложением путешествовали?</legend>
-                    <input type="radio" name="type" id="ios" checked class="apps__input">
-                    <label for="ios" class="form-list__label">Pink для iOS</label>
-                    <input type="radio" name="type" id="android" class="apps__input">
-                    <label for="android" class="form-list__label">Pink на Android</label>
-                    <input type="radio" name="type" id="windows" class="apps__input">
-                    <label for="windows" class="form-list__label">Windows Phone</label>
-                </fieldset>
-                <fieldset class="form-list_textarea">
-                    <legend class="form-list__legend">С каким приложением путешествовали?</legend>
-                    <label for="letter" class="form-list__label">Опишите свои эмоции</label>
-                    <textarea name="letter" id="letter" rows="10" class="textarea__input">Можно прям в красках, не стесняясь в выражениях</textarea>
-                </fieldset>
-                <button type="submit" class="button">Отправить форму</button>
-                <p class="form-list__paragraph">&#9913; — обязательные поля</p>
-            </form>
-        </div>
-        <div class="page-main__modal">
-            <h2 class="modal__title">Ваша заявка отправлена</h2>
-            <p class="modal__paragraph">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-            <button type="button" class="button">Закрыть окно</button>
-        </div>
-        <div class="page-main__modal">
-            <h2 class="modal__title">Что-то пошло не так!</h2>
-            <p class="modal__paragraph">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-            <button type="button" class="button">OK</button>
-        </div>
+        <section class="page-main__wrapper">
+            <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+            <p class="page-main__paragraph">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+            <div class="form__wrapper">
+                <form action="#" method="post" target="_blank" class="form__list">
+                    <fieldset class="form-list__personal">
+                        <legend class="form-list__legend">Личные данные</legend>
+                        <p>
+                            <label for="surname" class="form-list__label">Фамилия:</label>
+                            <input type="text" name="surname" id="surname" required placeholder="Укажите фамилию&#9913;" class="personal__input">
+                        </p>
+                        <p>
+                            <label for="name" class="form-list__label">Имя:</label>
+                            <input type="text" name="name" id="name" required placeholder="Ведите ваше имя&#9913;" class="personal__input">
+                        </p>
+                        <p>
+                            <label for="patronym" class="form-list__label">Отчество:</label>
+                            <input type="text" name="patronym" id="patronym" placeholder="Ну и отчество тоже" class="personal__input">
+                        </p>
+                    </fieldset>
+                    <fieldset class="form-list__checkbox">
+                        <legend class="form-list__legend">Ваши безбашенные достижения в путешествии</legend>
+                        <p>
+                            <input type="checkbox" checked name="selfi" id="selfi" class="checkbox__input">
+                            <label for="selfi" class="checkbox__label">Сделал селфи с акулой</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" checked name="beach" id="beach" class="checkbox__input">
+                            <label for="beach" class="checkbox__label">Обгорел на пляже</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="norris" id="norris" class="checkbox__input">
+                            <label for="norris" class="checkbox__label">Видел Чака Норриса</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="souvenirs" id="souvenirs" class="checkbox__input">
+                            <label for="souvenirs" class="checkbox__label">Накупил сувениров</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" checked name="tower" id="tower" class="checkbox__input">
+                            <label for="tower" class="checkbox__label">Удержал башню</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="hotel" id="hotel" class="checkbox__input">
+                            <label for="hotel" class="checkbox__label">Разгромил отель</label>
+                        </p>
+                    </fieldset>
+                    <fieldset class="form-list__contacts">
+                        <legend class="form-list__legend">Контакты</legend>
+                        <p>
+                            <label for="phone" class="form-list__label">Номер телефона</label>
+                            <input type="tel" name="phone" id="phone" pattern="8[0-9]{3}-[0-9]{7}" placeholder="Номер, пожалуйста" class="contacts__input">
+
+                        </p>
+                        <p>
+                            <label for="email" class="form-list__label">Адрес почты</label>
+                            <input type="email" name="email" id="email" required placeholder="Введите почту&#9913;" class="contacts__input">
+                        </p>
+                    </fieldset>
+                    <fieldset class="form-list__apps">
+                        <legend class="form-list__legend">С каким приложением путешествовали?</legend>
+                        <p>
+                            <input type="radio" name="type" id="ios" checked class="apps__input">
+                            <label for="ios" class="form-list__label">Pink для iOS</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="type" id="android" class="apps__input">
+                            <label for="android" class="form-list__label">Pink на Android</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="type" id="windows" class="apps__input">
+                            <label for="windows" class="form-list__label">Windows Phone</label>
+                        </p>
+                    </fieldset>
+                    <fieldset class="form-list_textarea">
+                        <legend class="form-list__legend">С каким приложением путешествовали?</legend>
+                        <label for="letter" class="form-list__label">Опишите свои эмоции</label>
+                        <textarea name="letter" id="letter" rows="10" class="textarea__input">Можно прям в красках, не стесняясь в выражениях</textarea>
+                    </fieldset>
+                    <button type="submit" class="button">Отправить форму</button>
+                    <p class="form-list__paragraph">&#9913; — обязательные поля</p>
+                </form>
+            </div>
+            <div class="page-main__modal">
+                <h2 class="modal__title">Ваша заявка отправлена</h2>
+                <p class="modal__paragraph">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+                <button type="button" class="button">Закрыть окно</button>
+            </div>
+            <div class="page-main__modal">
+                <h2 class="modal__title">Что-то пошло не так!</h2>
+                <p class="modal__paragraph">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+                <button type="button" class="button">OK</button>
+            </div>
+        </section>
     </main>
     <footer class="page__footer">
         <a class="page-footer__logo">

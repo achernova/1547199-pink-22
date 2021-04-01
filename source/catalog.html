@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Главная HTML Academy: PINK</title>
+  <title>Каталог HTML Academy: PINK</title>
 </head>
 
 <body class="page__body">
@@ -43,149 +43,128 @@
 
     </nav>
 
+    <div class="page-header__page-intro page__intro">
+      <p class="page-intro">Фотографии пользователей</p>
+    </div>
+
   </header>
 
-  <main class="page__main">
-    <h1 class="visually-hidden">Приложение PINK для мобильных устройств для обработки фотографий</h1>
-    <section class="download">
-      <h2 class="download__title">Взгляните на жизнь иначе!</h2>
-      <a href="#" class="download_link">Скачать приложение</a>
+    <main class="page__main page__catalog">
+      <h1 class="visually-hidden">Фотографии пользователей</h1>
 
-      <ul class="download__list">
-        <li class="download-list__item">
-          <a href="#" aria-label="IOS">IOS</a>
-        </li>
-        <li class="download-list__item">
-          <a href="#" aria-label="Android">Android</a>
-        </li>
-        <li class="download-list__item">
-          <a href="#" aria-label="Windows">Windows</a>
-        </li>
-      </ul>
+      <section class="catalog">
+        <h2 class="intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
 
-      <p class="download_paragraph">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-    </section>
+        <ul class="catalog__list">
+          <li class="catalog-list__item">
+            <article>
+              <img src="img/img-anna.jpg" width="320" height="137" alt="фото Анна" class="photo-card--large" />
+              <h2 class="catalog-list__name">Анна</h2>
+              <p class="catalog-list__time">(5 минут назад)</p>
+              <p class="catalog-list__paragraph">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <a href="catalog.html?liked" class="catalog-list__like">Нравится: 215</a>
+            </article>
+          </li>
+          <li class="catalog-list__item">
+            <article>
+              <img src="img/img-levon.jpg" width="270" height="180" alt="фото Левон" class="photo-card" />
+              <h2 class="catalog-list__name">Левон</h2>
+              <p class="catalog-list__time">(5 часов назад)</p>
+              <p class="catalog-list__paragraph">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <a href="catalog.html?liked" class="catalog-list__like">Нравится: 356</a>
+            </article>
+          </li>
+          <li class="catalog-list__item">
+            <article>
+              <img src="img/img-anton.jpg" width="280" height="180" alt="фото Антон" class="photo-card" />
+              <h2 class="catalog-list__name">Антон</h2>
+              <p class="catalog-list__time">(12 часов назад)</p>
+              <p class="catalog-list__paragraph">Соседи будут рады!</p>
+              <a href="catalog.html?liked" class="catalog-list__like">Нравится: 666</a>
+            </article>
+          </li>
+          <li class="catalog-list__item">
+            <article>
+              <img src="img/img-boris.jpg" width="280" height="180" alt="фото Борис" class="photo-card"/>
+              <h2 class="catalog-list__name">Борис</h2>
+              <p class="catalog-list__time">(20 часов назад)</p>
+              <p class="catalog-list__paragraph">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <a href="catalog.html?liked" class="catalog-list__like">Нравится: 215</a>
+            </article>
+          </li>
+          <li class="catalog-list__item">
+            <article>
+              <img src="img/img-sergey.jpg" width="280" height="180" alt="фото Сергей" class="photo-card"/>
+              <h2 class="catalog-list__name">Сергей</h2>
+              <p class="catalog-list__time">(25 часов назад)</p>
+              <p class="catalog-list__paragraph">Самая кубанская в мире!</p>
+              <a href="catalog.html?liked" class="catalog-list__like">Нравится: 4</a>
+            </article>
+          </li>
+          <li class="catalog-list__item">
+            <article>
+              <img src="img/img-maxim.jpg" width="280" height="180" alt="фото Максим" class="photo-card"/>
+              <h2 class="catalog-list__name">Максим</h2>
+              <p class="catalog-list__time">(40 часов назад)</p>
+              <p class="catalog-list__paragraph">Где снег-то?</p>
+              <a href="catalog.html?liked" class="catalog-list__like">Нравится: 150</a>
+            </article>
+          </li>
+          <li class="catalog-list__item">
+            <article>
+              <img src="img/img-nadejda.jpg" width="280" height="180" alt="фото Надежда" class="photo-card"/>
+              <h2 class="catalog-list__name">Надежда</h2>
+              <p class="catalog-list__time">(45 часов назад)</p>
+              <p class="catalog-list__paragraph">Всем GM и взаимные лайки!</p>
+              <a href="catalog.html?liked" class="catalog-list__like">Нравится: 2560</a>
+            </article>
+          </li>
+        </ul>
 
-    <section class="features">
-      <h2 class="visually-hidden">Преимущества</h2>
-      <p>Устали от серости мегаполиса? Нам есть, что вам предложить!</p>
+      </section>
 
-      <ul class="features__list">
-        <li class="features__item">
-          <h3 class="features__title">Поднимает настроение</h3>
-          <p class="features__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-        </li>
-        <li class="features__item">
-          <h3 class="features__title">Меняет мир вокруг</h3>
-          <p class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </li>
-        <li class="features__item">
-          <h3 class="features__title">Заводит новых друзей</h3>
-          <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-        </li>
-      </ul>
+      <section class="post__filter">
+        <h2 class="visually-hidden">Фильтры</h2>
+        <p class="filter-intro">itro !!!! Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        <p class="post-filter__paragraph"></p>
 
-      <div class="screen">
-        <img src="img/iphone-screen.jpg" width="157" height="320" alt="Скиншот приложения PINK">
-      </div>
+        <div class="post-filter__content">
+          <img src="img/photo-filter.jpg" width="280" height="374" alt="фильтры" class="filter__photo">
 
-    </section>
+          <ul class="filter__list">
+            <li class="filter-list__item">
+              <form class="catalog-filter__crope">
+                <button type="button" class="button filter__button">crop</button>
+                <label for="scale"></label>
+                <input type="range" id="scale" name="scale" min="1" max="100">
+              </form>
+            </li>
+            <li class="filter-list__item">
+              <form class="catalog-filter__fill">
+                <button type="button" class="button filter__button">fill</button>
+                <label for="fill"></label>
+                <input type="range" id="fill" name="fill" min="1" max="100">
+              </form>
+            </li>
+            <li class="filter-list__item">
+              <form class="catalog-filter__contrast">
+                <button type="button" class="button filter__button">contrast</button>
+                <label for="contrast"></label>
+                <input type="range" id="contrast" name="contrast" min="1" max="100">
+              </form>
+            </li>
+          </ul>
 
-    <section class="reviews">
-      <h2 class="visually-hidden">Отзывы</h2>
+          <form class="post__form">
+            <button type="submit" class="button post__button">Запостить</button>
+            <button type="button" class="button cancel__button">Отмена</button>
+          </form>
 
-      <div class="reviews__slider">
-        <blockquote class="reviews__item">
-          <div class="reviews__author-info">
-            <cite class="reviews__author-name">Николай Петров</cite>
-            <p class="reviews__description">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </div>
-        </blockquote>
-
-        <blockquote class="reviews__item">
-          <div class="reviews__author-info">
-            <cite class="reviews__author-name">Николай Петров</cite>
-            <p class="reviews__description">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </div>
-        </blockquote>
-
-        <blockquote class="reviews__item">
-          <div class="reviews__author-info">
-            <cite class="reviews__author-name">Николай Петров</cite>
-            <p class="reviews__description">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </div>
-        </blockquote>
-      </div>
-
-    </section>
-
-    <section class="price">
-      <h2 class="visyally-hidden">Цены</h2>
-
-      <div class="price__slider">
-        <table class="price__table">
-          <tr class="price-table__row heading">
-            <td> </td>
-            <th>База</th>
-            <th>Стандарт</th>
-            <th>Анлим</th>
-          </tr>
-          <tr class="price-table__row table__price">
-            <td></td>
-            <td>1,99 USD</td>
-            <td>3.99 USD</td>
-            <td>9.99 USD</td>
-          </tr>
-          <tr class="price-table__row">
-            <th>Розовый фильтр</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="price-table__row">
-            <th>Смайлики</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="price-table__row">
-            <th>Комментарии</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </div>
-
-    </section>
-
-    <section class="contacts">
-      <h2 class="vsually-hidden">Контакты</h2>
-
-      <div class="contacts__content">
-        <h3 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h3>
-        <div class="contacts__phone">
-          <p class="contacts__text">Звоните:
-            <a href="tel:+78125556666" class="contacts__link phone">+7 (812) 555-66-66</a>
-          </p>
         </div>
-        <div class="contacts__mail">
-          <p class="contacts__text">Пишите:
-            <a href="mailto:mail@htmlacademy.ru " class="contacts__link mail">mail@htmlacademy.ru</a>
-          </p>
-        </div>
-        <div class="contacts__address">
-          <p class="contacts__text">Приезжайте в гости:</p>
-          <address class="address">ул. Большая Конюшенная, 19/8</address>
-        </div>
-      </div>
-      <div class="contacts__maps">
-        <img src="img/map.jpg" width="320" height="200" alt="карта">
-      </div>
 
-    </section>
+      </section>
 
-  </main>
+    </main>
 
   <footer class="page-footer">
 
@@ -238,7 +217,6 @@
     </div>
 
   </footer>
-
 </body>
 
 </html>

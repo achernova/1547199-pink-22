@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
   <title>Каталог HTML Academy: PINK</title>
 </head>
 
@@ -27,23 +28,23 @@
       <div class="main-nav__list">
         <ul class="site-list">
           <li class="site-list__item">
-            <a href="#">Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Фотографии</a>
+            <a href="catalog.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Конкурс</a>
+            <a href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+            <a href="htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
       </div>
 
     </nav>
 
-    <div class="page-header__page-intro page__intro">
+    <div class="page-header__page-intro">
       <p class="page-intro">Фотографии пользователей</p>
     </div>
 
@@ -125,30 +126,28 @@
 
       <section class="post-filter">
         <h2 class="visually-hidden">Фильтры</h2>
-        <p class="filter-intro">itro !!!! Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
-        <p class="post-filter__paragraph"></p>
-
+        <p class="filter-intro">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
         <div class="post-filter__content">
           <img src="img/photo-filter.jpg" width="280" height="374" alt="фильтры" class="filter__photo">
 
           <ul class="filter-list">
             <li class="filter-list__item">
               <form class="catalog-filter__crope">
-                <button type="button" class="button filter__button">crop</button>
+                <button type="button" class="filter-button filter__button">crop</button>
                 <label for="scale"></label>
                 <input type="range" id="scale" name="scale" min="1" max="100">
               </form>
             </li>
             <li class="filter-list__item">
               <form class="catalog-filter__fill">
-                <button type="button" class="button filter__button">fill</button>
+                <button type="button" class="filter-button filter__button">fill</button>
                 <label for="fill"></label>
                 <input type="range" id="fill" name="fill" min="1" max="100">
               </form>
             </li>
             <li class="filter-list__item">
               <form class="catalog-filter__contrast">
-                <button type="button" class="button filter__button">contrast</button>
+                <button type="button" class="filter-button filter__button">contrast</button>
                 <label for="contrast"></label>
                 <input type="range" id="contrast" name="contrast" min="1" max="100">
               </form>
@@ -156,8 +155,8 @@
           </ul>
 
           <form class="post-form">
-            <button type="submit" class="button post-form__button">Запостить</button>
-            <button type="button" class="button cancel-form__button">Отмена</button>
+            <button type="submit" class="post-button">Запостить</button>
+            <button type="button" class="post-button">Отмена</button>
           </form>
 
         </div>
@@ -182,7 +181,7 @@
     </div>
 
     <div class="page-footer__social">
-      <ul class="social-ist">
+      <ul class="social-list">
         <li class="social-list__item">
           <a href="twitter.com" class="social-list__link social-list__link--twitter" aria-label="twitter">
             <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">

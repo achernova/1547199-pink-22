@@ -1,0 +1,32 @@
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  .set-fonts(300; 24px; 29px);
+  color: @grey-clr;
+  background-color: @white;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

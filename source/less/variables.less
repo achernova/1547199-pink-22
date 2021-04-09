@@ -1,0 +1,56 @@
+/*Цвета*/
+@background-grey: #1D2631;
+@white: #ffffff;
+@black: #000000;
+@black-opacity: rgba(0,0,0,0.3);
+@background-light: #F2F2F2;
+@table: #E5E5E5;
+@grey-clr: #283645;
+@pink-clr: #D22856;
+@green-button: #2AAB6D;
+
+/*main*/
+
+/*Шрифт*/
+.set-fonts(@weight; @size; @height) {
+  font-weight: @weight;
+  font-size: @size;
+  line-height: @height;
+}
+
+/*Кнопки*/
+@padding-button: 21px 38px 21px 38px;
+
+
+.green-button() {
+  .set-fonts(700; 18px; 30px);
+  color: @white;
+  background-color: @green-button;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.border() {
+  .bordered {
+    border: 4px solid;
+    border-radius: 60px;
+  }
+}
+
+/*reset list*/
+
+.reset-list() {
+  .indent {
+    margin: 0;
+    padding: 0;
+  }
+
+  .list {
+    list-style: none;
+  }
+
+  .display {
+    display: none;
+  }
+}

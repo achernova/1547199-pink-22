@@ -1,6 +1,9 @@
 .catalog-list {
   background-color: @background-light;
   .reset-list .list();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .catalog-list__name {
@@ -18,4 +21,20 @@
 .catalog-list__like {
   .set-fonts(400; 14px; 24px);
   color: @pink-clr;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-list__wrapper {
+    width: 640px;
+  }
+
+  .catalog-list__item:first-child {
+    width: 640px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-list__wrapper {
+    width: 940px;
+  }
 }

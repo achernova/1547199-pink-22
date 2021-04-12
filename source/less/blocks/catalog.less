@@ -1,4 +1,21 @@
 .intro {
   .set-fonts(400; 14px; 30px);
   color: @grey-clr;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__wrapper {
+    width: 640px;
+  }
+
+  .intro {
+    .set-fonts(400; 18px; 30px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__wrapper {
+    width: 940px;
+  }
 }

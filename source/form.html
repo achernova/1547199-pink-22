@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <title>Форма HTML Academy: PINK</title>
 </head>
@@ -52,13 +53,13 @@
 
     <main class="page-main page-form">
 
-      <section class="contest-form">
+      <section class="contest-form contest-form__wrapper">
         <h1 class="visually-hidden">Конкурс на самое безбашенное путешествие с Пинк</h1>
         <p class="contest-form__intro">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
 
         <div class="contest-form__content">
 
-          <form action="#" method="post" target="_blank" class="form">
+          <form action="#" method="post" target="_blank" class="form form__wrapper">
 
             <fieldset class="form__personal-date">
               <legend class="form__legend">Личные данные</legend>
@@ -132,14 +133,16 @@
               </p>
             </fieldset>
 
-            <fieldset class="form_textarea">
-              <legend class="form__legend">С каким приложением путешествовали?</legend>
-              <label class="textarea__label" for="letter">Опишите свои эмоции</label>
+            <fieldset class="form__textarea">
+              <legend class="form__legend">Опишите свои эмоции</legend>
+              <label class="textarea__label" for="letter"></label>
               <textarea class="textarea__input" name="letter" id="letter" rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
             </fieldset>
-
+            <div class="form__button-container">
               <button type="submit" class="form__button">Отправить форму</button>
               <p class="form__paragraph">&#9913; — обязательные поля</p>
+              <p class="form__paragraph-long">&#9913; — обязательные для заполнения поля</p>
+            </div>
 
           </form>
         </div>

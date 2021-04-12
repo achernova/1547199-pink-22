@@ -2,29 +2,107 @@
   background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-color: @background-grey;
+  background-size: 100%;
   color: @white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .download__content {
+  margin-top: 28px;
   background-color: @background-grey;
+  display: flex;
+  flex-direction: column;
+  .reset-list .indent ();
+}
+
+.download__mobile {
+  margin-top: 34px;
+  box-sizing: border-box;
 }
 
 .download__title {
-  .set-fonts(300; 24px; 1,2);
+  .set-fonts(300; 24px; 29px);
+  text-align: center;
 }
 
 .download__link {
+  .set-fonts(700; 18px; 18px);
   .border .bordered();
   border-color: @white;
   color: @white;
-  padding: @padding-button;
+  padding: 21px 39px 21px 38px;
+  width: 280px;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
 }
 
-.download_paragraph {
+.download__paragraph {
   .set-fonts(300; 14px; 24px);
   text-align: center;
 }
 
 .download__list {
+  .reset-list .indent();
   .reset-list .list();
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+  margin-top: 38px;
+}
+
+@media (min-width: @tablet-width) {
+  .download__wrapper {
+    width: 640px;
+  }
+
+  .download {
+    display: grid;
+    grid-template-columns: 320px 320px;
+    margin: 0 auto;
+    background-image: url("../img/back-mobile-big.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .download__link {
+    width: 300px;
+  }
+
+  .download__title {
+    .set-fonts(300; 40px; 48px);
+  }
+
+  .download__paragraph {
+    .set-fonts(300; 18px; 24px);
+  }
+
+  .download__content {
+    background-color: transparent;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .download__wrapper {
+    width: 940px;
+    background-image: url("../img/back-mobile-big.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .download__link {
+    width: 300px;
+  }
+
+  .download__title {
+    .set-fonts(300; 50px; 68px);
+  }
+
+  .download__paragraph {
+    .set-fonts(300; 18px; 24px);
+  }
 }

@@ -1,15 +1,50 @@
+.post-filter {
+  text-align: center;
+}
+
 .filter-intro {
   .set-fonts(400; 14px; 30px);
 }
 
 .post-filter__content {
   background-color: @background-light;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .post-button {
   .border .bordered();
   .set-fonts(700; 18px; 18px);
   color: @pink-clr;
-  padding: @padding-button;
   width: 280px;
+  padding: 21px 90px;
+}
+
+.filter-list {
+  .reset-list .list();
+}
+
+@media (min-width: @tablet-width) {
+  .post-filter__wrapperr {
+    width: 640px;
+  }
+
+  .filter-intro {
+    .set-fonts(400; 18px; 30px);
+  }
+
+  .post-button {
+    width: 260px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .post-filter__wrapper {
+    width: 940px;
+  }
+
+  .post-button {
+    width: 183px;
+  }
 }

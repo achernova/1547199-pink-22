@@ -43,3 +43,136 @@
   .set-fonts(400; 14px; 30px);
   color: @grey-clr;
 }
+
+.form__paragraph-long {
+  display: none;
+}
+
+.form__button-container {
+  text-align: center;
+  margin-top: 52px;
+
+  .form__button {
+    width: 276px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    width: 640px;
+  }
+
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__personal-date {
+    order: 1;
+  }
+
+  .form__apps {
+    order: 2;
+    background-color: transparent;
+  }
+
+  .form__contacts {
+    order: 3;
+  }
+
+  .form__checkbox {
+    order: 4;
+    background-color: transparent;
+  }
+
+  .form__textarea {
+    order: 5;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 940px;
+
+    .textarea__input {
+      width: 496px;
+      height: 189px;
+    }
+  }
+
+  .form__button-container {
+    order: 6;
+    width: 640px;
+    display: flex;
+    justify-content: space-between;
+
+    .form__button {
+      width: 296px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__wrapper {
+    width: 940px;
+  }
+
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__personal-date {
+    order: 1;
+  }
+
+  .form__apps {
+    order: 2;
+    background-color: transparent;
+  }
+
+  .form__contacts {
+    order: 3;
+    width: 940px;
+  }
+
+  .form__checkbox {
+    order: 4;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .checkbox__label {
+      margin-right: 50px;
+    }
+  }
+
+  .form__textarea {
+    order: 5;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 940px;
+
+    .textarea__input {
+      height: 124px;
+      width: 816px;
+    }
+  }
+
+  .form__button-container {
+    order: 6;
+    width: 940px;
+  }
+
+  .form__paragraph {
+    display: none;
+  }
+
+  .form__paragraph-long {
+    display: block;
+    .set-fonts(400; 14px; 30px);
+    color: @grey-clr;
+  }
+}

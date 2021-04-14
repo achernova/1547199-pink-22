@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <title>Главная HTML Academy: PINK</title>
 </head>
@@ -21,11 +22,11 @@
     </a>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__toggle main-nav--closed" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
-      <div class="main-nav__list">
+      <div class="main-nav__list main-nav__wrapper">
         <ul class="site-list">
           <li class="site-list__item">
             <a href="#">Главная</a>
@@ -48,10 +49,14 @@
 
   <main class="page-main">
     <h1 class="visually-hidden">Приложение PINK для мобильных устройств для обработки фотографий</h1>
-    <section class="download">
+
+    <section class="download download__wrapper">
       <h2 class="download__title">Взгляните на жизнь иначе!</h2>
-      <a href="#" class="download__link">Скачать приложение</a>
+      <picture class="download__mobile">
+        <!--<img src="img/phone.png" width="320" height="286">-->
+      </picture>
       <div class="download__content">
+        <a href="#" class="download__link">Скачать приложение</a>
         <ul class="download__list">
           <li class="download__list-item">
             <a href="#" aria-label="IOS">
@@ -81,44 +86,53 @@
             </a>
           </li>
         </ul>
-        <p class="download__paragraph">Доступно для iPhone, iPad, And
+        <p class="download__paragraph">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
-      roid, Windows Phone, OS X, Windows 8</p>
     </section>
 
-    <section class="features">
+    <section class="features features__wrapper">
       <h2 class="visually-hidden">Преимущества</h2>
       <p class="features__intro">Устали от серости мегаполиса?</p>
       <p class="features__intro">Нам есть, что вам предложить!</p>
-
-      <ul class="features__list">
-        <li class="features__item">
-          <h3 class="features__title">Поднимает настроение</h3>
-          <p class="features__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-        </li>
-        <li class="features__item">
-          <h3 class="features__title">Меняет мир вокруг</h3>
-          <p class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </li>
-        <li class="features__item">
-          <h3 class="features__title">Заводит новых друзей</h3>
-          <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-        </li>
-      </ul>
-
-      <div class="features__screen">
-        <img src="img/iphone-screen.jpg" width="157" height="320" alt="Скиншот приложения PINK">
+      <div class="features-list__background">
+        <ul class="features__list">
+          <li class="features__item">
+            <h3 class="features__title">Поднимает настроение</h3>
+            <p class="features__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </li>
+          <li class="features__item">
+            <h3 class="features__title">Меняет мир вокруг</h3>
+            <p class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="features__item">
+            <h3 class="features__title">Заводит новых друзей</h3>
+            <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+        <div class="features__screen">
+          <img src="img/iphone-screen.jpg" width="157" height="320" alt="Скиншот приложения PINK">
+        </div>
       </div>
 
+    </section>
+
+    <section class="result result__wrapper">
+      <div></div>
+      <div>
+        <h2 class="result__title">Эффект на 24 часа!</h2>
+        <p class="result__intro">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        <a href="#" class="result__link">Узнать больше об исследовании</a>
+      </div>
     </section>
 
     <section class="reviews">
       <h2 class="visually-hidden">Отзывы</h2>
 
-      <div class="reviews__slider">
+      <div class="reviews__slider reviews__wrapper">
         <blockquote class="reviews__item">
           <div class="reviews__author-info">
             <cite class="reviews__author-name">Николай Петров</cite>
+            <p class="reviews__about">25 лет, водитель трамвая</p>
             <p class="reviews__description">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </div>
         </blockquote>
@@ -126,6 +140,7 @@
         <blockquote class="reviews__item">
           <div class="reviews__author-info">
             <cite class="reviews__author-name">Николай Петров</cite>
+            <p class="reviews__about">25 лет, водитель трамвая</p>
             <p class="reviews__description">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </div>
         </blockquote>
@@ -133,6 +148,7 @@
         <blockquote class="reviews__item">
           <div class="reviews__author-info">
             <cite class="reviews__author-name">Николай Петров</cite>
+            <p class="reviews__about">25 лет, водитель трамвая</p>
             <p class="reviews__description">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </div>
         </blockquote>
@@ -147,39 +163,39 @@
         <table class="price__table">
           <tr class="price__table-row heading">
             <td rowspan="2" class="empty"> </td>
-            <th>База</th>
+            <th class="hide">База</th>
             <th>Стандарт</th>
-            <th>Анлим</th>
+            <th class="hide">Анлим</th>
           </tr>
           <tr class="price__table-row table-price">
-            <td>1,99 USD</td>
+            <td class="hide">1,99 USD</td>
             <td>3.99 USD</td>
-            <td>9.99 USD</td>
+            <td class="hide">9.99 USD</td>
           </tr>
           <tr class="price__table-row content">
             <th>Розовый фильтр</th>
+            <td class="hide"></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="hide"></td>
           </tr>
           <tr class="price__table-row content">
             <th>Смайлики</th>
+            <td class="hide"></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="hide"></td>
           </tr>
           <tr class="price__table-row content">
             <th>Комментарии</th>
+            <td class="hide"></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="hide"></td>
           </tr>
         </table>
       </div>
 
     </section>
 
-    <section class="contacts">
+    <section class="contacts contacts__wrapper">
       <h2 class="visually-hidden">Контакты</h2>
 
       <div class="contacts__content">
@@ -247,6 +263,7 @@
         </li>
       </ul>
     </div>
+
     <div class="page-footer__copyright">
       <p>Разработано
         <a href="htmlacademy.ru">

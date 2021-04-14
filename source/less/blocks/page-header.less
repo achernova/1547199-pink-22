@@ -1,11 +1,50 @@
 .page-header {
+  margin: auto;
   background-color: @black-opacity;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-header__page-intro {
-  .set-fonts(300; 24px; auto);
   color: @white;
   background-image: url("../img/back.jpg");
   background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
+}
+
+.page-header__logo-link {
+  height: 66px;
+}
+
+.page-intro {
+  .set-fonts(300; 24px; 33px);
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  .page-header__logo-link {
+    height: 110px;
+  }
+
+  .page-intro {
+    .set-fonts(300; 50px; 68px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo-link {
+    height: 110px;
+  }
+
+  .page-header {
+    width: 940px;
+    display: grid;
+    margin: 0 auto;
+  }
 }

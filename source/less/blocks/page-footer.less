@@ -2,6 +2,38 @@
   .set-fonts(400; 14px; 18px);
 }
 
+.page-footer {
+  margin: 70px auto;
+  display: flex;
+  flex-direction: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .social-list {
   .reset-list .list();
+  .reset-list .indent();
+  display: flex;
+  flex-direction: flex-start;
+  justify-content: space-around;
+  width: 200px;
+  align-self: center;
+}
+
+.page-footer__copyright p {
+  .reset-list .indent();
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    width: 640px;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: 940px;
+  }
 }

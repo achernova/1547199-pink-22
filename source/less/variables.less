@@ -10,50 +10,10 @@
 @green-button: #2AAB6D;
 
 /*main*/
+@mobile-width-only: 659px;
 @tablet-width: 660px;
 @desktop-width: 1200px;
-@mobile-width-only: 659px;
-
 
 /*Шрифт*/
-.set-fonts(@weight; @size; @height) {
-  font-weight: @weight;
-  font-size: @size;
-  line-height: @height;
-}
 
-/*Кнопки*/
-.green-button() {
-  .set-fonts(700; 18px; 30px);
-  color: @white;
-  background-color: @green-button;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
 
-.border() {
-  .bordered {
-    border: 4px solid;
-    border-radius: 60px;
-  }
-}
-
-/*reset list*/
-
-.reset-list() {
-  .indent {
-    margin: 0;
-    padding: 0;
-  }
-
-  .list {
-    list-style: none;
-  }
-
-  .display {
-    display: none;
-  }
-}
-
-/*other*/

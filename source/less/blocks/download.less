@@ -1,13 +1,19 @@
 .download {
-  background-image: url("../img/back-mobile.jpg");
-  background-repeat: no-repeat;
-  background-color: @background-grey;
-  background-size: 100%;
   color: @white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+}
+
+.download__background {
+  background-image: url("../img/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-color: @background-grey;
+  background-size: 100%;
+  position: relative;
+  top: -66px;
+  z-index: -1;
 }
 
 .download__content {
@@ -19,13 +25,16 @@
 }
 
 .download__mobile {
-  margin-top: 34px;
+  margin-top: 64px;
   box-sizing: border-box;
 }
 
 .download__title {
   .set-fonts(300; 24px; 29px);
   text-align: center;
+  width: 280px;
+  margin: auto;
+  margin-top: 90px;
 }
 
 .download__link {
@@ -33,11 +42,12 @@
   .border .bordered();
   border-color: @white;
   color: @white;
-  padding: 21px 39px 21px 38px;
+  padding: 21px 21px;
   width: 280px;
   text-align: center;
   box-sizing: border-box;
   display: block;
+  margin: auto;
 }
 
 .download__paragraph {
@@ -56,17 +66,14 @@
 }
 
 @media (min-width: @tablet-width) {
-  .download__wrapper {
+  /*.download__wrapper {
     width: 640px;
-  }
+  }*/
 
   .download {
     display: grid;
-    grid-template-columns: 320px 320px;
+    grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    background-image: url("../img/back-mobile-big.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
   }
 
   .download__link {
@@ -75,6 +82,11 @@
 
   .download__title {
     .set-fonts(300; 40px; 48px);
+    margin-top: 202px;
+  }
+
+  .download__mobile {
+    margin-top: 202px;
   }
 
   .download__paragraph {
@@ -84,14 +96,16 @@
   .download__content {
     background-color: transparent;
   }
+
+  .download__background {
+    top: -150px;
+    background-size: cover;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .download__wrapper {
-    width: 940px;
-    background-image: url("../img/back-mobile-big.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
+    /*width: 940px;*/
   }
 
   .download__link {
@@ -105,4 +119,14 @@
   .download__paragraph {
     .set-fonts(300; 18px; 24px);
   }
+
+  .download__background {
+  background-image: url("../img/back-mobile-large.jpg");
+  background-repeat: no-repeat;
+  background-color: @background-grey;
+  background-size: cover;
+  position: relative;
+  top: -110px;
+  z-index: -1;
+}
 }

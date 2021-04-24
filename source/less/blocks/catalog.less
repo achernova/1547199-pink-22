@@ -1,12 +1,20 @@
-.intro {
-  .set-fonts(400; 14px; 30px);
-  color: @grey-clr;
-  text-align: center;
+.catalog {
+  .reset-list .indent();
+  display: inline-block;
+
+  .intro {
+    .set-fonts(400; 14px; 30px);
+    color: @grey-clr;
+    text-align: center;
+  }
 }
+
+
 
 @media (min-width: @tablet-width) {
   .catalog__wrapper {
-    width: 640px;
+    width: 660px;
+    margin: 0 auto;
   }
 
   .intro {
@@ -16,6 +24,6 @@
 
 @media (min-width: @desktop-width) {
   .catalog__wrapper {
-    width: 940px;
+    width: 1200px;
   }
 }

@@ -1,0 +1,50 @@
+.popular-photo {
+  background-color: @background-light;
+
+  .popular-photo__image {
+    margin-bottom: 20px;
+    padding-bottom: 26px;
+
+    .popular-photo__description {
+      border: none;
+      padding: 0 20px;
+
+      .popular-photo__name {
+        .set-fonts(700; 14px; 24px);
+      }
+
+      .popular-photo__time {
+        .set-fonts(300; 12px; 24px);
+      }
+
+      .popular-photo__paragraph {
+        .set-fonts(400; 14px; 24px);
+      }
+
+      .popular-photo__like {
+        .set-fonts(400; 14px; 24px);
+        color: @pink-clr;
+      }
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .popular-photo__image {
+    display: block;
+    box-sizing: border-box;
+
+    .photo-card--large {
+      width: 660px;
+    }
+  }
+
+
+
+}
+
+@media (min-width: @desktop-width) {
+  .photo-card--large {
+    width: 1200px;
+  }
+}

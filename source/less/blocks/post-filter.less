@@ -4,13 +4,19 @@
 
 .filter-intro {
   .set-fonts(400; 14px; 30px);
+  text-align: center;
 }
 
 .post-filter__content {
   background-color: @background-light;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
+
+  .filter__photo {
+    align-self: center;
+  }
 }
 
 .post-button {

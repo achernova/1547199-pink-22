@@ -1,41 +1,54 @@
 .page-header {
-  margin: auto;
+  margin: 0 auto;
   background-color: @black-opacity;
   width: 100%;
 }
 
 .page-intro {
   .set-fonts(300; 24px; 33px);
+  color: @white;
+  text-align: center;
+  padding: 102px 20px 0 20px;
 }
 
-.page-header__page-intro {
-  margin-bottom: 51px;
-}
 
-.intro__background {
+.intro-background {
   background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-color: @background-grey;
   background-size: 100%;
   position: relative;
-  top: -120px;
+  top: -90px;
   z-index: -1;
+  padding-bottom: 51px;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
-    /*width: 640px;*/
+    width: 660px;
     height: 110px;
   }
 
   .page-intro {
     .set-fonts(300; 50px; 68px);
+    padding-top: 170px;
+  }
+
+  .intro-background {
+    background-image: url("../img/back-mobile-big.jpg");
+    background-repeat: no-repeat;
+    background-color: @background-grey;
+    background-size: cover;
+    position: relative;
+    top: -160px;
+    z-index: -1;
+    padding-bottom: 51px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    /*width: 940px;*/
+    width: 1200px;
     height: 110px;
   }
 }

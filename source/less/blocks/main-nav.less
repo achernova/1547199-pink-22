@@ -177,6 +177,20 @@
     margin: 0;
     border: none;
     padding-top: 48px;
+
+    &:hover {
+      color: @pink-clr;
+    }
+
+    &:disabled {
+      color: @white-opacity;
+    }
+
+    &:active {
+      color:@white;
+      border-bottom: 2px solid @white;
+      padding-bottom: 19px;
+    }
   }
 
   .site-list__item a {

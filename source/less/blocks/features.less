@@ -1,42 +1,79 @@
-
 .features__intro {
   color: @grey-clr;
   .set-fonts(300; 24px; 29px);
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 45px;
 }
 
-.features__list {
-  .reset-list .list();
-  text-align: center;
-  padding: 0;
-  margin: auto;
-  margin-top: 123px;
-}
+.features-list__grid {
+  .features__list {
+    .reset-list .list();
+    text-align: center;
+    padding: 0 20px;
+    margin: auto;
+    margin-top: 123px;
 
-.features-list__background {
-  background-color: @background-light;
-}
+    .features__item {
+      .features__title {
+        .set-fonts(700; 18px; 24px);
+        color: @black;
+      }
 
-.features__item {
-  .features__title {
-    .set-fonts(700; 18px; 24px);
-    color: @black;
+      .features__description {
+        .set-fonts(400; 14px; 24px);
+        color: @grey-clr;
+      }
+    }
   }
 
-  .features__description {
-    .set-fonts(400; 14px; 24px);
-    color: @grey-clr;
+  .features__screen-mobile {
+    text-align: center;
+  }
+
+  .features__screen-tablet {
+    display: none;
+  }
+
+  .features__screen-desctop {
+    display: none;
   }
 }
+
 
 @media (min-width: @tablet-width) {
   .features__wrapper {
     width: 640px;
+    margin: 0 auto;
   }
 
   .features__intro {
     .set-fonts(300; 40px; 54px);
+  }
+
+  .features-list__grid {
+    display: flex;
+
+    .features__list {
+      width: 310px;
+      order: 2;
+      margin: 0;
+      margin-left: 42px;
+      text-align: left;
+    }
+
+    .features__screen-mobile {
+      display: none;
+    }
+
+    .features__screen-tablet {
+      display: block;
+      order: 1;
+    }
+
+    .features__screen-desctop {
+      display: none;
+    }
   }
 }
 
@@ -49,20 +86,41 @@
     .set-fonts(300; 50px; 68px);
   }
 
-  .features__list {
+  .features-list__grid {
     display: grid;
-    grid-template-columns: 252px 252px 252px;
-    gap: 68px;
-    box-sizing: border-box;
-  }
+    grid-template-rows: 1fr 1fr;
 
-  .features__item {
-    .features__title {
-      .set-fonts(700; 30px; 30px);
+    .features__list {
+      order: 2;
+      display: grid;
+      grid-template-columns: 252px 252px 252px;
+      gap: 68px;
+      box-sizing: border-box;
+      margin: 0;
+
+      .features__item {
+        text-align: center;
+
+        .features__title {
+          .set-fonts(700; 30px; 30px);
+        }
+
+        .features__description {
+          .set-fonts(400; 18px; 30px);
+        }
+      }
     }
 
-    .features__description {
-      .set-fonts(400; 18px; 30px);
+    .features__screen-tablet {
+      display: none;
+    }
+
+    .features__screen-desctop {
+      display: grid;
+      grid-template-columns: 252px 252px 252px;
+      gap: 68px;
+      order: 1;
+      margin: 0 auto;
     }
   }
 }

@@ -24,6 +24,19 @@
       .popular-photo__like {
         .set-fonts(400; 14px; 24px);
         color: @pink-clr;
+        padding-left: 28px;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 13px;
+          height: 12px;
+          background-image: url("../img/heart.svg");
+          background-repeat: no-repeat;
+          top: 2px;
+          left: 1px;
+        }
       }
     }
   }
@@ -38,9 +51,6 @@
       width: 660px;
     }
   }
-
-
-
 }
 
 @media (min-width: @desktop-width) {

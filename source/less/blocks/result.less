@@ -9,9 +9,10 @@
 
 @media (min-width: @tablet-width) {
   .result {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
+    display: block;
+    padding-left: 330px;
+    margin-bottom: 138px;
+    box-sizing: border-box;
   }
 
   .result__wrapper {
@@ -20,10 +21,26 @@
 
   .result__title {
     .set-fonts(700; 30px; 36px);
+    position: relative;
+    margin: 0;
+    margin-top: 102px;
+    width: 168px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 238px;
+      height: 276px;
+      background-image: url("../img/time.png");
+      background-repeat: no-repeat;
+      left: -290px;
+      top: -40px;
+    }
   }
 
   .result__intro {
     .set-fonts(400; 14px; 24px);
+    width: 310px;
   }
 
   .result__link {
@@ -33,9 +50,9 @@
 
 @media (min-width: @desktop-width) {
   .result {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
+    display: block;
+    padding-left: 370px;
+    margin-bottom: 138px;
   }
 
   .result__wrapper {
@@ -44,10 +61,12 @@
 
   .result__title {
     .set-fonts(700; 30px; 30px);
+    width: 534px;
   }
 
   .result__intro {
     .set-fonts(400; 18px; 30px);
+    width: 534px;
   }
 
   .result__link {

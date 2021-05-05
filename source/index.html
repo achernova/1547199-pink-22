@@ -60,9 +60,6 @@
 
     <section class="download download__wrapper download__background">
       <h2 class="download__title">Взгляните на жизнь иначе!</h2>
-      <picture class="download__mobile">
-        <img src="img/phone.png" width="320" height="286">
-      </picture>
       <div class="download__content">
         <a href="#" class="download__link">Скачать приложение</a>
         <ul class="download__list">
@@ -102,7 +99,7 @@
       <h2 class="visually-hidden">Преимущества</h2>
       <p class="features__intro">Устали от серости мегаполиса?</p>
       <p class="features__intro">Нам есть, что вам предложить!</p>
-      <div class="features-list__background">
+      <div class="features-list__grid">
         <ul class="features__list">
           <li class="features__item">
             <h3 class="features__title">Поднимает настроение</h3>
@@ -117,15 +114,22 @@
             <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
-        <div class="features__screen">
-          <img src="img/iphone-screen.jpg" width="157" height="320" alt="Скиншот приложения PINK">
+        <div class="features__screen-mobile">
+          <img src="img/iphone-screen-mobile.png" width="157" height="280" alt="Скиншот приложения PINK">
+        </div>
+        <div class="features__screen-tablet">
+          <img src="img/iphone-screen-tablet.png" width="268" height="481" alt="Скиншот приложения PINK">
+        </div>
+        <div class="features__screen-desctop">
+          <img class="screen" src="img/iphone-screen-desk1.png" width="186" height="301" alt="Скиншот приложения PINK">
+          <img src="img/iphone-screen-desk2.png" width="186" height="301" alt="Скиншот приложения PINK">
+          <img src="img/iphone-screen-desk3.png" width="186" height="301" alt="Скиншот приложения PINK">
         </div>
       </div>
 
     </section>
 
     <section class="result result__wrapper">
-      <div></div>
       <div>
         <h2 class="result__title">Эффект на 24 часа!</h2>
         <p class="result__intro">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
@@ -162,41 +166,87 @@
         </blockquote>
       </div>
 
+      <div class="slider-buttons">
+          <button type="button" class="slider-buttons__dot-1" aria-label="Слайд первый"></button>
+          <button type="button" class="slider-buttons__dot-2" aria-label="Слайд второй"></button>
+          <button type="button" class="slider-buttons__dot-3" aria-label="Слайд третий"></button>
+      </div>
+
     </section>
 
-    <section class="price">
+    <section class="price price__wrapper">
       <h2 class="visually-hidden">Цены</h2>
 
       <div class="price__slider">
-        <table class="price__table">
-          <tr class="price__table-row heading">
-            <td rowspan="2" class="empty"> </td>
-            <th class="hide">База</th>
-            <th>Стандарт</th>
-            <th class="hide">Анлим</th>
+        <div class="price__slider-item">
+          <div class="slider-item-background">
+            <h3 class="slider-item__title">База</h3>
+            <p class="slider-item__price">1,99 usd</p>
+          </div>
+          <ul class="slider-item__price-list base">
+            <li class="price-list__item item-first">Розовый фильтр</li>
+            <li class="price-list__item item-second">Смайлики</li>
+            <li class="price-list__item item-third">Комментарии</li>
+          </ul>
+        </div>
+        <div class="price__slider-item">
+          <div class="slider-item-background">
+            <h3 class="slider-item__title">Стандарт</h3>
+            <p class="slider-item__price">3,99 usd</p>
+          </div>
+          <ul class="slider-item__price-list standart">
+            <li class="price-list__item item-first">Розовый фильтр</li>
+            <li class="price-list__item item-second">Смайлики</li>
+            <li class="price-list__item item-third">Комментарии</li>
+          </ul>
+        </div>
+        <div class="price__slider-item">
+          <div class="slider-item-background">
+            <h3 class="slider-item__title">Анлим</h3>
+            <p class="slider-item__price">9,99 usd</p>
+          </div>
+          <ul class="slider-item__price-list unlimit">
+            <li class="price-list__item item-first">Розовый фильтр</li>
+            <li class="price-list__item item-second">Смайлики</li>
+            <li class="price-list__item item-third">Комментарии</li>
+          </ul>
+        </div>
+        <div class="slider-buttons">
+          <button type="button" class="slider-buttons__dot-1" aria-label="Слайд первый"></button>
+          <button type="button" class="slider-buttons__dot-2" aria-label="Слайд второй"></button>
+          <button type="button" class="slider-buttons__dot-3" aria-label="Слайд третий"></button>
+        </div>
+      </div>
+      <div class="price__table">
+        <table class="table">
+          <tr class="table__row table__heading">
+            <td rowspan="2" class="row-empty"> </td>
+            <th class="table__head">База</th>
+            <th class="table__head">Стандарт</th>
+            <th class="table__head">Анлим</th>
           </tr>
-          <tr class="price__table-row table-price">
-            <td class="hide">1,99 USD</td>
-            <td>3.99 USD</td>
-            <td class="hide">9.99 USD</td>
+          <tr class="table__row table__price">
+            <td class="table__price-head">1,99 USD</td>
+            <td class="table__price-head">3.99 USD</td>
+            <td class="table__price-head">9.99 USD</td>
           </tr>
-          <tr class="price__table-row content">
-            <th>Розовый фильтр</th>
-            <td class="hide"></td>
-            <td></td>
-            <td class="hide"></td>
+          <tr class="table__row content content-base">
+            <th class="content__heading">Розовый фильтр</th>
+            <td class="content__check-first"></td>
+            <td class="content__check-second"></td>
+            <td class="content__check-third"></td>
           </tr>
-          <tr class="price__table-row content">
-            <th>Смайлики</th>
-            <td class="hide"></td>
-            <td></td>
-            <td class="hide"></td>
+          <tr class="table__row content content-standart">
+            <th class="content__heading">Смайлики</th>
+            <td class="content__check-first"></td>
+            <td class="content__check-second"></td>
+            <td class="content__check-third"></td>
           </tr>
-          <tr class="price__table-row content">
-            <th>Комментарии</th>
-            <td class="hide"></td>
-            <td></td>
-            <td class="hide"></td>
+          <tr class="table__row content content-unlimit">
+            <th class="content__heading">Комментарии</th>
+            <td class="content__check-first"></td>
+            <td class="content__check-second"></td>
+            <td class="content__check-third"></td>
           </tr>
         </table>
       </div>
@@ -204,10 +254,9 @@
     </section>
 
     <section class="contacts contacts__wrapper">
-      <h2 class="visually-hidden">Контакты</h2>
+      <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
 
       <div class="contacts__content">
-        <h3 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h3>
         <div class="contacts__phone contacts__item">
           <p class="contacts__text">Звоните:          </p>
           <a href="tel:+78125556666" class="contacts__link phone">+7 (812) 555-66-66</a>
@@ -223,7 +272,9 @@
         </div>
       </div>
       <div class="contacts__maps">
-        <img src="img/map.jpg" width="320" height="200" alt="карта">
+        <!--<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+        width="320" height="200" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </iframe>-->
       </div>
 
     </section>
@@ -272,13 +323,12 @@
     </div>
 
     <div class="page-footer__copyright">
-      <p>Разработано
-        <a href="htmlacademy.ru">
-          <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#D22856"/>
-          </svg>
-        </a>
-      </p>
+      <p class="page-footer__paragraph">Разработано</p>
+      <a href="htmlacademy.ru">
+        <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#D22856"/>
+        </svg>
+      </a>
     </div>
 
   </footer>

@@ -9,11 +9,10 @@
     background-color: @background-light;
     padding-bottom: 26px;
     margin-bottom: 20px;
+    width: 300px;
   }
 
   .catalog-list__image {
-    padding: 0 20px;
-
     .photo-card {
       margin: auto;
     }
@@ -37,6 +36,19 @@
       .set-fonts(400; 14px; 24px);
       margin: 0 auto;
       color: @pink-clr;
+      padding-left: 28px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 13px;
+        height: 12px;
+        background-image: url("../img/heart.svg");
+        background-repeat: no-repeat;
+        top: 1px;
+        left: 1px;
+      }
     }
   }
 }
@@ -44,17 +56,18 @@
 @media (min-width: @tablet-width) {
   .catalog-list__wrapper {
     width: 640px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   .catalog-list {
     display: flex;
     flex-wrap: wrap;
   }
-
 }
 
 @media (min-width: @desktop-width) {
   .catalog-list__wrapper {
-    width: 940px;
+    width: 1200px;
   }
 }

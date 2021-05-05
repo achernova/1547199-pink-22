@@ -1,0 +1,212 @@
+.price__slider {
+  background-color: @white;
+
+  .price__slider-item:first-child {
+    display: none;
+  }
+
+  .price__slider-item:nth-child(3) {
+    display: none;
+  }
+
+  .price__slider-item {
+    .slider-item-background {
+      background-color: @grey-clr;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 98px;
+        background-color: @background-light;
+        top: 0;
+        left: 20px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 98px;
+        background-color: @background-light;
+        top: 0;
+        right: 20px;
+      }
+
+      .slider-item__title {
+        .set-fonts(700; 16px; 30px);
+        color: @white;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0;
+        padding-top: 19px;
+      }
+
+      .slider-item__price {
+        .set-fonts(300; 18px; 30px);
+        color: @white;
+        text-transform: uppercase;
+        margin: 0;
+        padding-bottom: 20px;
+      }
+    }
+
+    .slider-item__price-list {
+      .reset-list .list();
+      display: flex;
+      flex-direction: column;
+      .reset-list .indent();
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 214px;
+        background-color: @table;
+        top: 0;
+        left: 20px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 214px;
+        background-color: @table;
+        top: 0;
+        right: 20px;
+      }
+
+      .price-list__item {
+        .set-fonts(400; 14px; 30px);
+        text-transform: uppercase;
+        border: 2px solid @table;
+        border-top: none;
+        padding: 20px 0 20px 40px;
+      }
+    }
+
+    .base {
+      position: relative;
+
+      .item-first::before {
+        position: absolute;
+        content: "";
+        width: 31px;
+        height: 21px;
+        background-image: url("../img/checked.svg");
+        background-repeat: no-repeat;
+        top: 20px;
+        right: 40px;
+        border: none;
+      }
+
+      .item-second::before {
+        position: absolute;
+        content: "";
+        width: 27px;
+        height: 27px;
+        background-image: url("../img/cross.svg");
+        background-repeat: no-repeat;
+        top: 95px;
+        right: 40px;
+        border: none;
+      }
+
+      .item-third::before {
+        position: absolute;
+        content: "";
+        width: 27px;
+        height: 27px;
+        background-image: url("../img/cross.svg");
+        background-repeat: no-repeat;
+        top: 165px;
+        right: 40px;
+        border: none;
+      }
+    }
+
+    .standart {
+      position: relative;
+
+      .item-first::before {
+        position: absolute;
+        content: "";
+        width: 31px;
+        height: 21px;
+        background-image: url("../img/checked.svg");
+        background-repeat: no-repeat;
+        top: 20px;
+        right: 40px;
+        border: none;
+      }
+
+      .item-second::before {
+        position: absolute;
+        content: "";
+        width: 31px;
+        height: 21px;
+        background-image: url("../img/checked.svg");
+        background-repeat: no-repeat;
+        top: 95px;
+        right: 40px;
+        border: none;
+      }
+
+      .item-third::before {
+        position: absolute;
+        content: "";
+        width: 27px;
+        height: 27px;
+        background-image: url("../img/cross.svg");
+        background-repeat: no-repeat;
+        top: 165px;
+        right: 40px;
+        border: none;
+      }
+    }
+
+    .unlimit {
+      position: relative;
+
+      .item-first::before {
+        position: absolute;
+        content: "";
+        width: 31px;
+        height: 21px;
+        background-image: url("../img/checked.svg");
+        background-repeat: no-repeat;
+        top: 20px;
+        right: 40px;
+        border: none;
+      }
+
+      .item-second::before {
+        position: absolute;
+        content: "";
+        width: 31px;
+        height: 21px;
+        background-image: url("../img/checked.svg");
+        background-repeat: no-repeat;
+        top: 95px;
+        right: 40px;
+        border: none;
+      }
+
+      .item-third::before {
+        position: absolute;
+        content: "";
+        width: 31px;
+        height: 21px;
+        background-image: url("../img/checked.svg");
+        background-repeat: no-repeat;
+        top: 165px;
+        right: 40px;
+        border: none;
+      }
+    }
+  }
+}

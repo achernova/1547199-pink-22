@@ -1,5 +1,6 @@
 @media (min-width: @tablet-width) {
   .table {
+    width: 620px;
     margin: 0 auto;
     border-collapse: collapse;
     position: relative;
@@ -8,11 +9,10 @@
       background-color: @grey-clr;
       color: @white;
 
-      .table__head {
+      .rate {
         .set-fonts(700; 16px; 30px);
         text-transform: uppercase;
-        width: 152px;
-        padding-top: 19px;
+        padding-top: 15px;
         border-left: 2px solid @background-light;
       }
 
@@ -27,143 +27,145 @@
       text-align: center;
       background-color: @grey-clr;
 
-      .table__price-head {
+      .prices {
         .set-fonts(300; 18px; 30px);
-        padding-bottom: 16px;
+        padding-bottom: 5px;
         border-left: 2px solid @background-light;
       }
     }
 
-    .content {
+    .descriptions {
       background-color: @white;
       border: 2px solid @table;
       border-collapse: collapse;
 
-      th,
-      td {
+      .heading,
+      .check-first,
+      .check-second,
+      .check-third {
         border: 2px solid @table;
         border-collapse: collapse;
       }
 
-      .content__heading {
-        width: 153px;
+      .heading {
+        width: 138px;
         .set-fonts(400; 14px; 30px);
         text-align: left;
-        padding-top: 16px;
-        padding-bottom: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         padding-left: 15px;
       }
     }
 
-    .content-base {
-      .content__check-first::before {
+    .descriptions-base {
+      .check-first::before {
         position: absolute;
         content: "";
         width: 31px;
         height: 21px;
         background-image: url("../img/checked.svg");
         background-repeat: no-repeat;
-        top: 114px;
-        right: 370px;
+        top: 92px;
+        right: 371px;
         border: none;
       }
 
-      .content__check-second::before {
+      .check-second::before {
         position: absolute;
         content: "";
         width: 27px;
         height: 27px;
         background-image: url("../img/cross.svg");
         background-repeat: no-repeat;
-        top: 175px;
+        top: 135px;
         right: 375px;
         border: none;
       }
 
-      .content__check-third::before {
+      .check-third::before {
         position: absolute;
         content: "";
         width: 27px;
         height: 27px;
         background-image: url("../img/cross.svg");
         background-repeat: no-repeat;
-        top: 235px;
+        top: 180px;
         right: 375px;
         border: none;
       }
     }
 
-    .content-standart {
-      .content__check-first::before {
+    .descriptions-standart {
+      .check-first::before {
         position: absolute;
         content: "";
         width: 31px;
         height: 21px;
         background-image: url("../img/checked.svg");
         background-repeat: no-repeat;
-        top: 114px;
-        right: 220px;
+        top: 92px;
+        right: 218px;
         border: none;
       }
 
-      .content__check-second::before {
+      .check-second::before {
         position: absolute;
         content: "";
         width: 31px;
         height: 21px;
         background-image: url("../img/checked.svg");
         background-repeat: no-repeat;
-        top: 175px;
-        right: 220px;
+        top: 138px;
+        right: 218px;
         border: none;
       }
 
-      .content__check-third::before {
+      .check-third::before {
         position: absolute;
         content: "";
         width: 27px;
         height: 27px;
         background-image: url("../img/cross.svg");
         background-repeat: no-repeat;
-        top: 235px;
-        right: 225px;
+        top: 184px;
+        right: 219px;
         border: none;
       }
     }
 
-    .content-unlimit {
-      .content__check-first::before {
+    .descriptions-unlimit {
+      .check-first::before {
         position: absolute;
         content: "";
         width: 31px;
         height: 21px;
         background-image: url("../img/checked.svg");
         background-repeat: no-repeat;
-        top: 114px;
+        top: 92px;
         right: 60px;
         border: none;
       }
 
-      .content__check-second::before {
+      .check-second::before {
         position: absolute;
         content: "";
         width: 31px;
         height: 21px;
         background-image: url("../img/checked.svg");
         background-repeat: no-repeat;
-        top: 175px;
+        top: 138px;
         right: 60px;
         border: none;
       }
 
-      .content__check-third::before {
+      .check-third::before {
         position: absolute;
         content: "";
         width: 31px;
         height: 21px;
         background-image: url("../img/checked.svg");
         background-repeat: no-repeat;
-        top: 235px;
+        top: 184px;
         right: 60px;
         border: none;
       }
@@ -179,7 +181,7 @@
       background-color: @grey-clr;
       color: @white;
 
-      .table__head {
+      .rate {
         .set-fonts(700; 18px; 30px);
         text-transform: uppercase;
         width: 233px;
@@ -187,64 +189,64 @@
     }
 
     .table__price {
-      .table__price-head {
+      .prices {
         .set-fonts(300; 24px; 30px);
       }
     }
 
-    .content {
-      .content__heading {
+    .descriptions {
+      .heading {
         width: 234px;
         .set-fonts(400; 18px; 30px);
       }
     }
 
-    .content-base {
-      .content__check-first::before {
+    .descriptions-base {
+      .check-first::before {
         top: 114px;
         left: 350px;
       }
 
-      .content__check-second::before {
+      .check-second::before {
         top: 175px;
         left: 350px;
       }
 
-      .content__check-third::before {
+      .check-third::before {
         top: 235px;
         left: 350px;
       }
     }
 
-    .content-standart {
-      .content__check-first::before {
+    .descriptions-standart {
+      .check-first::before {
         top: 114px;
         right: 340px;
       }
 
-      .content__check-second::before {
+      .check-second::before {
         top: 175px;
         right: 340px;
       }
 
-      .content__check-third::before {
+      .check-third::before {
         top: 235px;
         right: 340px;
       }
     }
 
-    .content-unlimit {
-      .content__check-first::before {
+    .descriptions-unlimit {
+      .check-first::before {
         top: 114px;
         right: 100px;
       }
 
-      .content__check-second::before {
+      .check-second::before {
         top: 175px;
         right: 100px;
       }
 
-      .content__check-third::before {
+      .check-third::before {
         top: 235px;
         right: 100px;
       }

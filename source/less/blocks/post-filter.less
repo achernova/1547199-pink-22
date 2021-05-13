@@ -151,9 +151,35 @@
 @media (min-width: @desktop-width) {
   .post-filter__wrapper {
     width: 940px;
+    margin: 0 auto;
+
+    .post-filter__content {
+      .filter__photo {
+        margin-left: 80px;
+        margin-top: 57px;
+      }
+
+      .filter-list {
+        margin-top: 57px;
+
+        .filter-list__item {
+          .filter-list__form {
+            .filter__range {
+              width: 288px;
+            }
+          }
+        }
+      }
+    }
   }
 
-  .post-button {
-    width: 183px;
+  .post-form {
+    margin-top: 181px;
+    display: flex;
+    flex-direction: row;
+
+    .post-button {
+      width: 183px;
+    }
   }
 }

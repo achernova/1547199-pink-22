@@ -5,14 +5,25 @@
 
   .contacts__title {
     .set-fonts(300; 24px; 29px);
+    margin-bottom: 32px;
   }
 
   .contacts__content {
     padding: 0 20px;
 
-    .contacts__item {
-      margin-bottom: 30px;
+    .contacts__phone {
+      margin-bottom: 20px;
+    }
 
+    .contacts__mail {
+      margin-bottom: 20px;
+    }
+
+    .contacts__address {
+      margin-bottom: 35px;
+    }
+
+    .contacts__item {
       .contacts__text {
         .set-fonts(700; 18px; 25px);
         margin: 0 auto;
@@ -59,22 +70,31 @@
     .contacts__title {
       .set-fonts(300; 40px; 54px);
       margin: 0 auto;
-      margin-bottom: 50px;
+      margin-bottom: 35px;
+      width: 370px;
     }
 
     .contacts__content {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
 
+      .contacts__item {
+        .contacts__text {
+          .set-fonts(700; 18px; 25px);
+        }
+      }
+
       .contacts__address {
         align-self: center;
         margin: auto;
-      }
+        width: 211px;
+        margin-top: 23px;
 
-      .contacts__text {
-        .set-fonts(700; 18px; 25px);
+        .contacts__text {
+          margin-bottom: 4px;
+        }
       }
     }
 
@@ -85,7 +105,12 @@
       background-image: url("../img/map-tablet.jpg");
       background-repeat: no-repeat;
       background-color: @background-grey;
-      border: none;
+
+      .map {
+        display: none;
+        width: 660px;
+        height: 374px;
+      }
 
       &::before {
         position: absolute;

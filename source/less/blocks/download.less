@@ -4,7 +4,83 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+
+  .download__title {
+    .set-fonts(300; 24px; 29px);
+    text-align: center;
+    margin: auto;
+    margin-top: 90px;
+    padding: 0 20px 320px 20px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 286px;
+      background-image: url("../img/phone.png");
+      top: 86px;
+      left: -5px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 111px;
+      height: 197px;
+      background-image: url("../img/phone-screen.png");
+      background-repeat: no-repeat;
+      left: 100px;
+      top: 119px;
+    }
+  }
+
+  .download__content {
+    margin-top: 28px;
+    background-color: @background-grey;
+    display: flex;
+    flex-direction: column;
+    .reset-list .indent ();
+
+    .download__link {
+      .set-fonts(700; 18px; 18px);
+      .border .bordered();
+      border-color: @white;
+      color: @white;
+      padding: 15px 18px;
+      width: 280px;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 0 auto;
+      margin-top: 25px;
+
+      &:hover {
+        color: @pink-clr;
+        background-color: @white;
+      }
+    }
+  }
+
+  .download__paragraph {
+    .set-fonts(300; 14px; 24px);
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 10px;
+  }
+
+  .download__list {
+    .reset-list .indent();
+    .reset-list .list();
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 10px;
+    margin: 0 auto;
+    gap: 35px;
+    margin-top: 35px;
+    align-items: center;
+  }
 }
+
 
 .download__background {
   background-image: url("../img/back-mobile.jpg");
@@ -16,98 +92,9 @@
   z-index: -1;
 }
 
-.download__content {
-  margin-top: 28px;
-  background-color: @background-grey;
-  display: flex;
-  flex-direction: column;
-  .reset-list .indent ();
-
-  .download__link {
-    .set-fonts(700; 18px; 18px);
-    .border .bordered();
-    border-color: @white;
-    color: @white;
-    padding: 21px 21px;
-    width: 280px;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 0 auto;
-    margin-top: 28px;
-
-    &:hover {
-      color: @pink-clr;
-      background-color: @white;
-    }
-  }
-
-  .download__paragraph {
-    .set-fonts(300; 14px; 24px);
-    text-align: center;
-    padding: 0 20px;
-    padding-bottom: 38px;
-  }
-
-  .download__list {
-    .reset-list .indent();
-    .reset-list .list();
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 10px;
-    margin-top: 38px;
-  }
-}
-
-.download__title {
-  .set-fonts(300; 24px; 29px);
-  text-align: center;
-  margin: auto;
-  margin-top: 90px;
-  padding: 0 20px 320px 20px;
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 320px;
-    height: 286px;
-    background-image: url("../img/phone.png");
-    top: 86px;
-    left: -5px;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 111px;
-    height: 197px;
-    background-image: url("../img/phone-screen.png");
-    background-repeat: no-repeat;
-    left: 100px;
-    top: 119px;
-  }
-}
-
 @media (min-width: @tablet-width) {
   .download__wrapper {
     width: 660px;
-  }
-
-  .download {
-    display: block;
-  }
-
-  .download__background {
-    background-image: url("../img/back-mobile-big.jpg");
-    background-size: 100%;
-    top: -200px;
-  }
-
-  .download__title {
-    .set-fonts(300; 40px; 48px);
-    padding-top: 100px;
-    padding-right: 340px;
     position: relative;
 
     &::before {
@@ -116,7 +103,7 @@
       width: 660px;
       height: 545px;
       background-image: url("../img/phone-big.png");
-      top: 184px;
+      top: 185px;
       left: 1px;
     }
 
@@ -128,53 +115,66 @@
       background-image: url("../img/phone-screen-tablet.png");
       background-repeat: no-repeat;
       left: 372px;
-      top: 238px;
+      top: 240px;
     }
-  }
 
-  .download__content {
-    width: 640px;
-    position: relative;
-    background-color: transparent;
-    top: -200px;
-    display: grid;
-    grid-template-columns: 300px;
-    margin-left: 20px;
+    .download__title {
+      .set-fonts(300; 40px; 48px);
+      padding: 0;
+      margin-left: 57px;
+      margin-top: 205px;
+      width: 230px;
 
-    .download__link {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .download__content {
+      box-sizing: border-box;
       width: 300px;
-      margin-bottom: 50px;
-    }
+      position: relative;
+      background-color: transparent;
 
-    .download__list {
-      margin: 0;
-      margin-bottom: 42px;
-    }
+      .download__link {
+        width: 300px;
+        margin-top: 30px;
+        margin-bottom: 45px;
+        margin-left: 20px;
+      }
 
-    .download__paragraph {
-      margin-bottom: 0;
+      .download__list {
+        width: 200px;
+        margin: 0;
+        margin-left: 55px;
+        margin-bottom: 10px;
+      }
+
+      .download__paragraph {
+        .set-fonts(300; 18px; 24px);
+        margin-bottom: 21px;
+        margin-top: 18px;
+        width: 300px;
+      }
     }
   }
 
-  .download__paragraph {
-    .set-fonts(300; 18px; 24px);
-    margin-bottom: 119px;
+  .download__background {
+    background-image: url("../img/back-mobile-big.jpg");
+    background-size: 100%;
+    top: -110px;
+    padding-bottom: 91px;
   }
 }
+
 
 @media (min-width: @desktop-width) {
   .download__wrapper {
     width: 1200px;
-  }
-
-  .download__link {
-    width: 300px;
-  }
-
-  .download__title {
-    .set-fonts(300; 50px; 68px);
-    padding-right: 746px;
-    padding-left: 100px;
     position: relative;
 
     &::before {
@@ -183,8 +183,8 @@
       width: 1050px;
       height: 645px;
       background-image: url("../img/phone-desctop.png");
-      top: 260px;
-      left: 180px;
+      top: 205px;
+      left: 145px;
     }
 
     &::after {
@@ -194,25 +194,43 @@
       height: 408px;
       background-image: url("../img/phone-screen-desctop.png");
       background-repeat: no-repeat;
-      left: 749px;
-      top: 326px;
+      left: 715px;
+      top: 267px;
     }
-  }
 
-  .download__paragraph {
-    .set-fonts(300; 18px; 24px);
+    .download__title {
+      .set-fonts(300; 50px; 68px);
+      padding-right: 746px;
+      padding-left: 70px;
+      width: 300px;
+    }
+
+    .download__content {
+      box-sizing: border-box;
+      width: 940px;
+      padding-left: 110px;
+      margin-top: 9px;
+
+      .download__link {
+        .set-fonts(700; 21px; 18px);
+        width: 300px;
+        margin-bottom: 70px;
+      }
+
+      .download__list {
+        margin-bottom: 20px;
+      }
+
+      .download__paragraph {
+        .set-fonts(300; 18px; 24px);
+        margin-bottom: 36px;
+      }
+    }
   }
 
   .download__background {
     background-image: url("../img/back-mobile-large.jpg");
-    /*background-size: 853px auto;*/
     background-position: 50% 0;
     background-size: cover;
-  }
-
-  .download__content {
-    width: 940px;
-    top: -150px;
-    padding-left: 146px;
   }
 }

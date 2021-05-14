@@ -1,0 +1,102 @@
+.popular-photo {
+  background-color: @background-light;
+
+  .popular-photo__image {
+    margin-bottom: 20px;
+    padding-bottom: 26px;
+
+    .popular-photo__content {
+      .photo-card-large {
+        width: 100%;
+      }
+
+      .photo-card-large--tablet {
+        display: none;
+      }
+
+      .photo-card-large--desktop {
+        display: none;
+      }
+    }
+
+    .popular-photo__description {
+      border: none;
+      padding: 0 20px;
+
+      .popular-photo__name {
+        .set-fonts(700; 14px; 24px);
+      }
+
+      .popular-photo__time {
+        .set-fonts(300; 12px; 24px);
+      }
+
+      .popular-photo__paragraph {
+        .set-fonts(400; 14px; 24px);
+      }
+
+      .popular-photo__like {
+        .set-fonts(400; 14px; 24px);
+        color: @pink-clr;
+        padding-left: 28px;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 13px;
+          height: 12px;
+          background-image: url("../img/heart.svg");
+          background-repeat: no-repeat;
+          top: 2px;
+          left: 1px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .popular-photo {
+    .popular-photo__image {
+      display: block;
+      box-sizing: border-box;
+
+      .popular-photo__content {
+        .photo-card-large--mobile {
+          display: none;
+        }
+
+        .photo-card-large--tablet {
+          display: block;
+        }
+
+        .photo-card-large--desktop {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .popular-photo {
+    .popular-photo__image {
+      .popular-photo__content {
+        .photo-card-large--mobile {
+          display: none;
+        }
+
+        .photo-card-large--tablet {
+          display: none;
+        }
+
+        .photo-card-large--desktop {
+          display: block;
+        }
+      }
+    }
+  }
+
+
+}

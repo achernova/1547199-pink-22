@@ -1,59 +1,37 @@
-.form__personal-date {
-  background-color: @white;
-}
-
-.personal-date__label,
-.contacts__label {
-  .set-fonts(400; 14px; 30px);
-  color: @pink-clr;
-}
-
-.personal-date__input--text,
-.contacts__input--phone,
-.contacts__input--text,
-.textarea__input {
-  border: 1px solid @table;
-  .set-fonts(400; 18px; 30px);
-  color: @grey-clr;
-}
-
-.form__legend {
-  .set-fonts(400; 14px; 18px);
-  color: @pink-clr;
-}
-
-.form__checkbox,
-.form__apps {
-  background-color: @background-light;
-}
-
-.checkbox__label,
-.apps__label {
-  .set-fonts(400; 18px; 30px);
-  color: @grey-clr;
-}
-
-.form__button {
-  .green-button();
-  padding: 23px 0 23px 0;
-  width: 276px;
-}
-
-.form__paragraph {
-  .set-fonts(400; 14px; 30px);
-  color: @grey-clr;
-}
-
-.form__paragraph-long {
-  display: none;
+.form {
+  margin: auto;
+  margin-bottom: 15px;
+  min-width: 320px;
 }
 
 .form__button-container {
   text-align: center;
-  margin-top: 52px;
+  margin-top: 31px;
 
   .form__button {
-    width: 276px;
+    .green-button();
+    padding: 17px 59px 17px 59px;
+
+
+    &:hover {
+      background-color: @green-buttonhover;
+    }
+
+    &:active {
+      background-color: @green-buttonhover;
+      color: @white-opacity;
+    }
+  }
+
+  .form__paragraph {
+    .set-fonts(400; 14px; 30px);
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 35px;
+  }
+
+  .form__paragraph-long {
+    display: none;
   }
 }
 
@@ -64,39 +42,7 @@
 
   .form {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .form__personal-date {
-    order: 1;
-  }
-
-  .form__apps {
-    order: 2;
-    background-color: transparent;
-  }
-
-  .form__contacts {
-    order: 3;
-  }
-
-  .form__checkbox {
-    order: 4;
-    background-color: transparent;
-  }
-
-  .form__textarea {
-    order: 5;
-    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 940px;
-
-    .textarea__input {
-      width: 496px;
-      height: 189px;
-    }
   }
 
   .form__button-container {
@@ -117,62 +63,29 @@
   }
 
   .form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 470px 470px;
+    grid-column-gap: 50px;
+    margin: auto;
   }
 
-  .form__personal-date {
-    order: 1;
-  }
-
-  .form__apps {
-    order: 2;
-    background-color: transparent;
-  }
-
-  .form__contacts {
-    order: 3;
-    width: 940px;
-  }
-
-  .form__checkbox {
-    order: 4;
-    background-color: transparent;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    .checkbox__label {
-      margin-right: 50px;
-    }
-  }
-
-  .form__textarea {
-    order: 5;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 940px;
-
-    .textarea__input {
-      height: 124px;
-      width: 816px;
-    }
-  }
 
   .form__button-container {
     order: 6;
     width: 940px;
-  }
+    grid-column-start: 1;
+    grid-column-end: 3;
+    box-sizing: border-box;
 
-  .form__paragraph {
-    display: none;
-  }
+    .form__paragraph {
+      display: none;
+    }
 
-  .form__paragraph-long {
-    display: block;
-    .set-fonts(400; 14px; 30px);
-    color: @grey-clr;
+    .form__paragraph-long {
+      display: block;
+      .set-fonts(400; 14px; 30px);
+      color: @grey-clr;
+    }
   }
 }

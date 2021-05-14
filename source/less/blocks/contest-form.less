@@ -1,54 +1,47 @@
 .contest-form {
   display: grid;
   grid-template-rows: min-content 1fr;
-  margin: 0;
-}
+  margin: 0 auto;
+  margin-top: 216px;
 
-.contest-form__intro {
-  .set-fonts(400; 14px; 30px);
-  text-align: center;
+  .contest-form__intro--mobile {
+    .set-fonts(400; 14px; 30px);
+    color: @grey-clr;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0;
+  }
+
+  .contest-form__intro--table {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .contest-form__wrapper {
     width: 640px;
+    margin: 0 auto;
+
+    .contest-form__intro--mobile {
+      display: none;
+    }
+
+    .contest-form__intro--table {
+      display: block;
+      .set-fonts(400; 18px; 30px);
+      text-align: center;
+      margin-bottom: 70px;
+      padding: 0 56px;
+    }
+  }
+
+  .contest-form {
+    margin-top: 400px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .contest-form__wrapper {
     width: 940px;
-  }
-
-  .form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .form__personal-date {
-    order: 1;
-  }
-
-  .form__apps {
-    order: 2;
-    background-color: transparent;
-  }
-
-  .form__contacts {
-    order: 3;
-  }
-
-  .form__checkbox {
-    order: 4;
-    background-color: transparent;
-  }
-
-  .form__textarea {
-    order: 5;
-  }
-
-  .form__button-container {
-    order: 6;
   }
 }

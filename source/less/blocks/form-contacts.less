@@ -1,0 +1,135 @@
+.form__contacts {
+  border: none;
+
+
+  .form__contacts-legend {
+    display: none;
+  }
+
+  .form__contacts-content {
+    .form__contacts-item {
+      margin: 0;
+      margin-bottom: 19px;
+
+      .form__contacts-input--phone,
+      .form__contacts-input--text {
+        .set-fonts(400; 18px; 30px);
+        border: 2px solid @table;
+        color: @grey-clr;
+        width: auto;
+        height: 59px;
+        padding-left: 20px;
+        padding-right: 40px;
+        outline: none;
+
+        &:hover {
+          border: 2px solid @black;
+        }
+
+        &:active {
+          outline: none;
+          border: 2px solid @pink-clr;
+        }
+      }
+
+      .form__contacts-label {
+        .set-fonts(400; 14px; 30px);
+        color: @pink-clr;
+        margin-left: 23px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__contacts {
+    order: 3;
+    border: 2px solid @table;
+    width: 616px;
+    margin-bottom: 51px;
+
+    .form__contacts-legend {
+      display: block;
+      .set-fonts(400; 14px; 30px);
+      color: @pink-clr;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .form__contacts-content {
+      .form__contacts-item {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .form__contacts-input--phone,
+        .form__contacts-input--text {
+          width: 496px;
+          margin: auto;
+          order: 1;
+        }
+
+        .form__contacts-label {
+          order: 2;
+          margin-left: 77px;
+          margin-top: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__contacts {
+    order: 3;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    box-sizing: border-box;
+
+
+    .form__contacts-content {
+      margin: 0 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 74px;
+
+
+      .form__contacts-item {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        .form__contacts-input--phone,
+        .form__contacts-input--text {
+          width: 371px;
+          margin-bottom: 22px;
+        }
+
+        .form__contacts-input--phone {
+          position: relative;
+
+          &::after {
+            position: absolute;
+            content: "";
+            width: 59px;
+            height: 59px;
+            background-image: url("../img/icon-phone.png");
+            background-repeat: no-repeat;
+            left: 0;
+            top: 0;
+          }
+        }
+
+        .form__contacts-label {
+          margin-left: 17px;
+        }
+      }
+    }
+  }
+}

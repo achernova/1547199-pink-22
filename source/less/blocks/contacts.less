@@ -1,52 +1,207 @@
 .contacts {
   text-align: center;
   margin: auto;
-}
+  margin-top: 50px;
 
-.contacts__title {
-  .set-fonts(300; 24px; 29px);
-}
+  .contacts__title {
+    .set-fonts(300; 24px; 29px);
+    margin-bottom: 32px;
+  }
 
-.contacts__text {
-  .set-fonts(700; 18px; 25px);
-}
+  .contacts__content {
+    padding: 0 20px;
 
-.contacts__link {
-  color: @pink-clr;
-  .set-fonts(300; 24px; 33px);
-}
+    .contacts__phone {
+      margin-bottom: 20px;
+    }
 
-.address {
-  color: @pink-clr;
-  .set-fonts(300; 24px; 33px);
-  font-style: normal;
+    .contacts__mail {
+      margin-bottom: 20px;
+    }
+
+    .contacts__address {
+      margin-bottom: 35px;
+    }
+
+    .contacts__item {
+      .contacts__text {
+        .set-fonts(700; 18px; 25px);
+        margin: 0 auto;
+      }
+
+      .contacts__link {
+        color: @pink-clr;
+        .set-fonts(300; 24px; 33px);
+      }
+
+      .address {
+        color: @pink-clr;
+        .set-fonts(300; 24px; 33px);
+        font-style: normal;
+      }
+    }
+  }
+
+  .contacts__maps {
+    width: 320px;
+    height: 200px;
+    position: relative;
+    background-image: url("../img/map-mobile.jpg");
+    background-repeat: no-repeat;
+    background-color: @background-grey;
+    border: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 36px;
+      height: 36px;
+      background-image: url("../img/map-marker.svg");
+      top: 95px;
+      left: 140px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 123px;
+      background-image: url("../img/triangle-white-footer.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 123px;
+      top: -70px;
+      left: 0;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
-    width: 640px;
-  }
-
-  .contacts__title {
-    .set-fonts(300; 40px; 54px);
-  }
-
-  .contacts__text {
-    .set-fonts(700; 18px; 25px);
-  }
-
-  .contacts__map img {
     width: 660px;
-    height: 374px;
+
+    .contacts__title {
+      .set-fonts(300; 40px; 54px);
+      margin: 0 auto;
+      margin-bottom: 35px;
+      width: 370px;
+    }
+
+    .contacts__content {
+      margin-bottom: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .contacts__item {
+        .contacts__text {
+          .set-fonts(700; 18px; 25px);
+        }
+      }
+
+      .contacts__address {
+        align-self: center;
+        margin: auto;
+        width: 211px;
+        margin-top: 23px;
+
+        .contacts__text {
+          margin-bottom: 4px;
+        }
+      }
+    }
+
+    .contacts__maps {
+      width: 660px;
+      height: 374px;
+      position: relative;
+      background-image: url("../img/map-tablet.jpg");
+      background-repeat: no-repeat;
+      background-color: @background-grey;
+
+      .map {
+        width: 660px;
+        height: 374px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 36px;
+        height: 36px;
+        background-image: url("../img/map-marker.svg");
+        top: 195px;
+        left: 320px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 105%;
+        height: 123px;
+        background-image: url("../img/triangle-white-footer.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 123px;
+        top: -50px;
+        left: -10px;
+      }
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .contacts__wrapper {
-    width: 940px;
-  }
+    width: 1200px;
 
-  .contacts__title {
-    .set-fonts(300; 50px; 68px);
+    .contacts__title {
+      .set-fonts(300; 50px; 68px);
+      width: 490px;
+      margin-bottom: 60px;
+    }
+
+    .contacts__content {
+      margin: 0 auto;
+
+      .contacts__item {
+        margin: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    .contacts__maps {
+      width: 1200px;
+      height: 502px;
+      position: relative;
+      background-image: url("../img/map-desctop.jpg");
+      background-repeat: no-repeat;
+      background-color: @background-grey;
+      border: none;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 36px;
+        height: 36px;
+        background-image: url("../img/map-marker.svg");
+        top: 260px;
+        left: 580px;
+      }
+
+      .map {
+        width: 1200px;
+        height: 502px;
+      }
+
+        &::after {
+        position: absolute;
+        content: "";
+        width: 105%;
+        height: 123px;
+        background-image: url("../img/triangle-white-footer.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 123px;
+        top: -1px;
+        left: -25px;
+      }
+    }
   }
 }

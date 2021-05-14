@@ -1,50 +1,72 @@
 .page-header {
-  margin: auto;
+  margin: 0 auto;
   background-color: @black-opacity;
+  background-size: cover;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-}
+  height: 65px;
 
-.page-header__page-intro {
-  color: @white;
-  background-image: url("../img/back.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  text-align: center;
-}
+  .intro-background {
+    background-image: url("../img/back-mobile.jpg");
+    background-repeat: no-repeat;
+    background-color: @background-grey;
+    background-size: cover;
+    position: relative;
+    top: -90px;
+    z-index: -1;
 
-.page-header__logo-link {
-  height: 66px;
-}
-
-.page-intro {
-  .set-fonts(300; 24px; 33px);
+    .page-intro {
+      .set-fonts(300; 24px; 33px);
+      font-style: normal;
+      color: @white;
+      text-align: center;
+      margin: 0 auto;
+      padding: 120px 20px 42px 18px;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
-    width: 640px;
-    margin: 0 auto;
-  }
-
-  .page-header__logo-link {
+    width: 660px;
     height: 110px;
-  }
 
-  .page-intro {
-    .set-fonts(300; 50px; 68px);
+    .intro-background {
+      background-image: url("../img/back-mobile-big.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: @background-grey;
+      position: relative;
+      top: -110px;
+      z-index: -1;
+
+      .page-intro {
+        .set-fonts(300; 50px; 68px);
+        text-align: center;
+        padding: 175px 30px 57px 30px;
+        margin: 0;
+      }
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-header__logo-link {
-    height: 110px;
-  }
-
   .page-header {
-    width: 940px;
-    display: grid;
-    margin: 0 auto;
+    width: 1200px;
+    height: 110px;
+
+    .intro-background {
+      background-image: url("../img/back-mobile-large.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: @background-grey;
+      position: relative;
+      top: -140px;
+      z-index: -1;
+
+      .page-intro {
+        padding: 200px 100px 90px 100px;
+        margin: 0;
+      }
+    }
   }
 }

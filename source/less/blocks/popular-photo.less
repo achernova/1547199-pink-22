@@ -6,11 +6,15 @@
     padding-bottom: 26px;
 
     .popular-photo__content {
-      .photo-card--tablet {
+      .photo-card-large {
+        width: 100%;
+      }
+
+      .photo-card-large--tablet {
         display: none;
       }
 
-      .photo-card--desktop {
+      .photo-card-large--desktop {
         display: none;
       }
     }
@@ -53,38 +57,46 @@
 }
 
 @media (min-width: @tablet-width) {
-  .popular-photo__image {
-    display: block;
-    box-sizing: border-box;
+  .popular-photo {
+    .popular-photo__image {
+      display: block;
+      box-sizing: border-box;
 
-    .popular-photo__content {
-      .photo-card--mobile {
-        display: none;
-      }
+      .popular-photo__content {
+        .photo-card-large--mobile {
+          display: none;
+        }
 
-      .photo-card--tablet {
-        display: block;
-      }
+        .photo-card-large--tablet {
+          display: block;
+        }
 
-      .photo-card--desktop {
-        display: none;
+        .photo-card-large--desktop {
+          display: none;
+        }
       }
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .popular-photo__content {
-    .photo-card--mobile {
-      display: none;
-    }
+  .popular-photo {
+    .popular-photo__image {
+      .popular-photo__content {
+        .photo-card-large--mobile {
+          display: none;
+        }
 
-    .photo-card--tablet {
-      display: none;
-    }
+        .photo-card-large--tablet {
+          display: none;
+        }
 
-    .photo-card--desktop {
-      display: block;
+        .photo-card-large--desktop {
+          display: block;
+        }
+      }
     }
   }
+
+
 }

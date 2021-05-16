@@ -42,12 +42,16 @@
 @media (min-width: @tablet-width) {
   .form__personal {
     order: 1;
-    margin-bottom: 30px;
+    margin: 0 auto;
+    padding: 0;
+    width: 616px;
 
     .form__personal-item {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
 
 
       .form__personal-input--text {
@@ -56,6 +60,10 @@
       }
 
       .form__personal-label {
+        display: block;
+        box-sizing: border-box;
+        margin: 0;
+        margin-top: 20px;
         margin-right: 20px;
         align-self: flex-start;
       }
@@ -64,12 +72,27 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__personal-date {
+  .form__personal {
     order: 1;
-    width: 430px;
+    width: 433px;
     margin: 0;
     grid-column-start: 1;
     grid-column-end: 2;
-    box-sizing: border-box;
+
+
+    .form__personal-item {
+      .form__personal-label {
+        display: block;
+        margin: 0;
+        margin-top: 20px;
+        margin-right: 10px;
+      }
+
+      .form__personal-input--text {
+        padding: 0;
+        padding-left: 20px;
+        margin-right: 3px;
+      }
+    }
   }
 }

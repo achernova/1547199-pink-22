@@ -25,6 +25,22 @@
         .filter-list__form {
           .filter__button {
             border: none;
+
+            .filter-icon:hover path {
+              fill: @pink-clr;
+            }
+
+            .filter-icon:hover g {
+              opacity: 1;
+            }
+
+            .filter-icon:active path {
+              fill: grey-clr;
+            }
+
+            .filter-icon:active g {
+              opacity: 1;
+            }
           }
 
           .filter__range {
@@ -65,15 +81,34 @@
         width: 280px;
         padding: 14px 90px;
         margin-bottom: 10px;
+
+        &:hover {
+          color: @white;
+          background-color: @pink-clr;
+        }
+
+        &:active {
+          color: @white-opacity;
+          background-color: @pink-clr;
+        }
       }
 
       .cancel-button {
         .border .bordered();
         .set-fonts(700; 18px; 18px);
-        color: @grey-opacity;
+        color: @grey-opacity-light;
         width: 280px;
         padding: 14px 90px;
         margin-bottom: 10px;
+
+        &:hover {
+          color: @grey-opacity;
+        }
+
+        &:active {
+          color: @white-opacity;
+          background-color: @grey-opacity;
+        }
       }
     }
   }

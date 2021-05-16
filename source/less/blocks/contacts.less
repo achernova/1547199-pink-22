@@ -6,6 +6,7 @@
   .contacts__title {
     .set-fonts(300; 24px; 29px);
     margin-bottom: 32px;
+    padding: 0 20px;
   }
 
   .contacts__content {
@@ -17,6 +18,15 @@
 
     .contacts__mail {
       margin-bottom: 20px;
+      .contacts__link {
+        &:hover {
+          color:@grey-clr;
+        }
+
+        &:active {
+          color:@grey-opacity;
+        }
+      }
     }
 
     .contacts__address {
@@ -43,23 +53,23 @@
   }
 
   .contacts__maps {
-    width: 320px;
-    height: 200px;
+    z-index: -1;
     position: relative;
     background-image: url("../img/map-mobile.jpg");
     background-repeat: no-repeat;
     background-color: @background-grey;
     border: none;
+    margin: 0 auto;
 
-    &::before {
+    /*&::before {
       position: absolute;
       content: "";
       width: 36px;
       height: 36px;
       background-image: url("../img/map-marker.svg");
-      top: 95px;
+      top: 100px;
       left: 140px;
-    }
+    }*/
 
     &::after {
       position: absolute;
@@ -123,16 +133,6 @@
         height: 374px;
       }
 
-      &::before {
-        position: absolute;
-        content: "";
-        width: 36px;
-        height: 36px;
-        background-image: url("../img/map-marker.svg");
-        top: 195px;
-        left: 320px;
-      }
-
       &::after {
         position: absolute;
         content: "";
@@ -176,7 +176,7 @@
       background-color: @background-grey;
       border: none;
 
-      &::before {
+      /*&::before {
         position: absolute;
         content: "";
         width: 36px;
@@ -184,7 +184,7 @@
         background-image: url("../img/map-marker.svg");
         top: 260px;
         left: 580px;
-      }
+      }*/
 
       .map {
         width: 1200px;

@@ -12,7 +12,7 @@
 
   <header class="page-header">
 
-    <nav class="main-nav main-nav--closed">
+    <nav class="main-nav main-nav__wrapper main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -80,17 +80,17 @@
 
         <div class="contest-form__content">
 
-          <form action="#" method="post" target="_blank" class="form form__wrapper">
+          <form action="#" method="post" target="blank" class="form form__wrapper">
 
             <fieldset class="form__personal">
               <legend class="form__personal-legend">Личные данные</legend>
               <p class="form__personal-item">
                 <label class="form__personal-label" for="surname">Фамилия:</label>
-                <input class="form__personal-input--text" type="text" name="surname" id="surname" required placeholder="Укажите фамилию&#9913;">
+                <input class="form__personal-input--text" type="text" name="surname" id="surname" required placeholder="Укажите фамилию *">
               </p>
               <p class="form__personal-item">
                 <label class="form__personal-label" for="name">Имя:</label>
-                <input class="form__personal-input--text" type="text" name="name" id="name" required placeholder="Ведите ваше имя&#9913;">
+                <input class="form__personal-input--text" type="text" name="name" id="name" required placeholder="Ведите ваше имя *">
               </p>
               <p class="form__personal-item">
                 <label class="form__personal-label" for="patronym">Отчество:</label>
@@ -133,12 +133,12 @@
               <legend class="form__contacts-legend">Контактная информация</legend>
               <div class="form__contacts-content">
                 <p class="form__contacts-item">
-                  <label class="form__contacts-label" for="phone">Номер телефона</label>
+                  <label class="form__contacts-label form__contacts-icon-phone" for="phone">Номер телефона</label>
                   <input class="form__contacts-input--phone" type="tel" name="phone" id="phone" pattern="8[0-9]{3}-[0-9]{7}" placeholder="Номер, пожалуйста">
                 </p>
                 <p class="form__contacts-item">
-                  <label class="form__contacts-label" for="email">Адрес почты</label>
-                  <input class="form__contacts-input--text" type="email" name="email " id="email" required placeholder="Введите почту&#9913;">
+                  <label class="form__contacts-label form__contacts-icon-mail" for="email">Адрес почты</label>
+                  <input class="form__contacts-input--text" type="email" name="email " id="email" required placeholder="Введите почту *">
                 </p>
               </div>
             </fieldset>
@@ -167,8 +167,8 @@
             </fieldset>
             <div class="form__button-container">
               <button type="submit" class="form__button">Отправить форму</button>
-              <p class="form__paragraph">&#9913; — обязательные поля</p>
-              <p class="form__paragraph-long">&#9913; — обязательные для заполнения поля</p>
+              <p class="form__paragraph">* — обязательные поля</p>
+              <p class="form__paragraph-long">* — обязательные для заполнения поля</p>
             </div>
 
           </form>
@@ -219,27 +219,30 @@
         </ul>
       </div>
       <div class="page-footer__copyright">
-        <p class="page-footer__paragraph">Разработано
-          <a href="htmlacademy.ru">
-            <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#D22856"/>
-            </svg>
-          </a>
-        </p>
+      <p class="page-footer__paragraph">Разработано</p>
+      <a class="page-footer__logo-academy" href="htmlacademy.ru">
+        <svg class="page-footer__academy-icon" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#D22856"/>
+        </svg>
+      </a>
       </div>
 
   </footer>
-
-    <div class="modal">
+    <script src="js/navigation.js"></script>
+    <div class="modal modal__success">
       <h2 class="modal__title">Ваша заявка отправлена</h2>
       <p class="modal__paragraph">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-      <button type="button" class="button">Закрыть окно</button>
+      <div class="modal__button-conteiner">
+        <button class="modal__button" type="button">Закрыть окно</button>
+      </div>
     </div>
 
-    <div class="modal">
+    <div class="modal modal__failure">
       <h2 class="modal__title ">Что-то пошло не так!</h2>
       <p class="modal__paragraph ">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button type="button" class="button">OK</button>
+      <div class="modal__button-conteiner">
+        <button class="modal__button" type="button">OK</button>
+      </div>
     </div>
 </body>
 

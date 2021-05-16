@@ -1,6 +1,6 @@
 .form__contacts {
   border: none;
-
+  margin-top: 14px;
 
   .form__contacts-legend {
     display: none;
@@ -48,7 +48,9 @@
     order: 3;
     border: 2px solid @table;
     width: 616px;
-    margin-bottom: 51px;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 53px;
 
     .form__contacts-legend {
       display: block;
@@ -59,23 +61,52 @@
     }
 
     .form__contacts-content {
+      margin-top: 33px;
+
       .form__contacts-item {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
 
+
         .form__contacts-input--phone,
         .form__contacts-input--text {
           width: 496px;
           margin: auto;
           order: 1;
+          box-sizing: border-box;
+          padding: 0;
+          padding-left: 20px;
         }
 
         .form__contacts-label {
           order: 2;
           margin-left: 77px;
-          margin-top: 22px;
+          margin-top: 12px;
+          position: relative;
+        }
+
+        .form__contacts-icon-phone::before {
+          position: absolute;
+          content: "";
+          width: 59px;
+          height: 59px;
+          background-image: url("../img/icon-phone.png");
+          background-repeat: no-repeat;
+          top: -70px;
+          right: 60px;
+        }
+
+        .form__contacts-icon-mail::before {
+          position: absolute;
+          content: "";
+          width: 59px;
+          height: 59px;
+          background-image: url("../img/icon-mail.png");
+          background-repeat: no-repeat;
+          top: -70px;
+          right: 60px;
         }
       }
     }
@@ -85,12 +116,13 @@
 @media (min-width: @desktop-width) {
   .form__contacts {
     order: 3;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 0;
+    margin-top: 10px;
     padding: 0;
     grid-column-start: 1;
     grid-column-end: 3;
     box-sizing: border-box;
+    width: 936px;
 
 
     .form__contacts-content {
@@ -108,26 +140,22 @@
         .form__contacts-input--phone,
         .form__contacts-input--text {
           width: 371px;
-          margin-bottom: 22px;
-        }
-
-        .form__contacts-input--phone {
-          position: relative;
-
-          &::after {
-            position: absolute;
-            content: "";
-            width: 59px;
-            height: 59px;
-            background-image: url("../img/icon-phone.png");
-            background-repeat: no-repeat;
-            left: 0;
-            top: 0;
-          }
+          margin-bottom: 5px;
+          margin-top: 25px;
         }
 
         .form__contacts-label {
           margin-left: 17px;
+        }
+
+        .form__contacts-icon-phone::before {
+          top: -75px;
+          right: 2px;
+        }
+
+        .form__contacts-icon-mail::before {
+          top: -75px;
+          right: 2px;
         }
       }
     }

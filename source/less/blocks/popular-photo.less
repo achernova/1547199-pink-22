@@ -1,11 +1,12 @@
 .popular-photo {
-  background-color: @background-light;
 
   .popular-photo__image {
     margin-bottom: 20px;
     padding-bottom: 26px;
 
     .popular-photo__content {
+      display: block;
+
       .photo-card-large {
         width: 100%;
       }
@@ -20,25 +21,29 @@
     }
 
     .popular-photo__description {
-      border: none;
-      padding: 0 20px;
+      background-color: @background-light;
+      width: 280px;
+      margin: 0 auto;
 
       .popular-photo__name {
         .set-fonts(700; 14px; 24px);
+        padding: 0 20px;
       }
 
       .popular-photo__time {
         .set-fonts(300; 12px; 24px);
+        padding: 0 20px;
       }
 
       .popular-photo__paragraph {
         .set-fonts(400; 14px; 24px);
+        padding: 0 20px;
       }
 
       .popular-photo__like {
         .set-fonts(400; 14px; 24px);
         color: @pink-clr;
-        padding-left: 28px;
+        padding-left: 48px;
         position: relative;
 
         &::before {
@@ -49,7 +54,7 @@
           background-image: url("../img/heart.svg");
           background-repeat: no-repeat;
           top: 2px;
-          left: 1px;
+          left: 20px;
         }
       }
     }

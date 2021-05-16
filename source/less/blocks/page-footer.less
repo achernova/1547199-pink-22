@@ -8,6 +8,22 @@
 
   .page-footer__logo {
     margin-bottom: 32px;
+
+    .page-footer__logo-link {
+      cursor: pointer;
+
+      .logo-footer:hover path {
+        fill: @pink-clr;
+      }
+
+      .logo-footer:active path {
+        fill: @grey-opacity;
+      }
+
+      .logo-footer:active path:last-child {
+        fill: @pink-clr-opacity;
+      }
+    }
   }
 
   .page-footer__social {
@@ -31,6 +47,19 @@
         background-color: transparent;
         width: 48px;
         height: 48px;
+        cursor: pointer;
+
+        &:hover {
+          border-color: @grey-clr;
+        }
+
+        &:active {
+          border-color: @grey-opacity;
+        }
+
+        .social-list__icon:active path {
+          fill: @pink-clr-opacity;
+        }
       }
     }
   }
@@ -39,11 +68,24 @@
     .reset-list .indent();
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     .page-footer__paragraph {
       .set-fonts(400; 14px; 18px);
+      margin: 0;
       margin-right: 15px;
     }
+
+    .page-footer__logo-academy {
+      .page-footer__academy-icon:hover path {
+        fill: @black;
+      }
+
+      .page-footer__academy-icon:active path {
+        fill: @grey-opacity;
+      }
+    }
+
   }
 }
 
@@ -70,7 +112,7 @@
 
     .page-footer__copyright {
       box-sizing: border-box;
-      margin-top: 10px;
+      margin-top: 25px;
 
       .page-footer__paragraph {
         margin-bottom: 26px;

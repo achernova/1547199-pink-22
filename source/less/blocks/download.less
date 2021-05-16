@@ -61,6 +61,28 @@
         color: @pink-clr;
         background-color: @white;
       }
+
+      &:active {
+        color: @pink-clr-opacity;
+        background-color: @white;
+      }
+    }
+
+    .download__list {
+      .reset-list .indent();
+      .reset-list .list();
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0 10px;
+      margin: 0 auto;
+      gap: 35px;
+      margin-top: 35px;
+      align-items: center;
+
+      .download__list-item a {
+        display: block;
+        cursor: pointer;
+      }
     }
   }
 
@@ -69,18 +91,6 @@
     text-align: center;
     padding: 0 20px;
     margin-top: 10px;
-  }
-
-  .download__list {
-    .reset-list .indent();
-    .reset-list .list();
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 0 10px;
-    margin: 0 auto;
-    gap: 35px;
-    margin-top: 35px;
-    align-items: center;
   }
 }
 
@@ -92,7 +102,6 @@
   background-size: 100%;
   position: relative;
   top: -66px;
-  z-index: -1;
 }
 
 @media (min-width: @tablet-width) {

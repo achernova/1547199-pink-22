@@ -11,35 +11,33 @@
   background-color: @white;
   text-align: center;
   padding-top: 30px;
+}
 
-  .modal__title {
-    .set-fonts(700; 18px; 24px);
-    color: @black;
-    }
-
-  .modal__paragraph {
-    .set-fonts(400; 14px; 24px);
-    color: @grey-clr;
+.modal__title {
+  .set-fonts(700; 18px; 24px);
+  color: @black;
   }
 
-  .modal__button-conteiner {
-    .modal__button {
-      margin-top: 50px;
-      margin-bottom: 50px;
-      .green-button();
-      text-transform: uppercase;
-      padding: 20px 0 20px 0;
-      width: 276px;
-    }
-  }
+.modal__paragraph {
+  .set-fonts(400; 14px; 24px);
+  color: @grey-clr;
+}
+
+.modal__button {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  .green-button();
+  text-transform: uppercase;
+  padding: 20px 0 20px 0;
+  width: 276px;
 }
 
 .modal__success {
   display: none;
+}
 
-  .modal__button-conteiner {
-    background-color: @background-light;
-  }
+.modal__button-conteiner {
+  background-color: @background-light;
 }
 
 .modal__failure {

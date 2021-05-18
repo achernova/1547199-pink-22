@@ -109,8 +109,10 @@
 
     <section class="features features__wrapper">
       <h2 class="visually-hidden">Преимущества</h2>
-      <p class="features__intro">Устали от серости мегаполиса?</p>
-      <p class="features__intro-p">Нам есть, что вам предложить!</p>
+      <div class="features__intro">
+        <p class="features__intro-paragraph">Устали от серости мегаполиса?</p>
+        <p class="features__intro-paragraph">Нам есть, что вам предложить!</p>
+      </div>
       <div class="features-list__grid">
         <ul class="features__list">
           <li class="features__item">
@@ -149,11 +151,8 @@
 
     <section class="reviews reviews__wrapper">
       <h2 class="visually-hidden">Отзывы</h2>
-        <input class="reviews__slider-radio" type="radio" id="reviews-position-1" name="table-position">
-        <input class="reviews__slider-radio" type="radio" id="reviews-position-2" name="table-position" checked>
-        <input class="reviews__slider-radio" type="radio" id="reviews-position-3" name="table-position">
       <div class="reviews__slider">
-        <blockquote class="reviews__item">
+        <blockquote class="reviews__item reviews__item-first">
           <div class="reviews__author-info">
             <cite class="reviews__author-name">Николай Петров</cite>
             <p class="reviews__about">25 лет, водитель трамвая</p>
@@ -161,7 +160,7 @@
           </div>
         </blockquote>
 
-        <blockquote class="reviews__item">
+        <blockquote class="reviews__item reviews__item-second">
           <div class="reviews__author-info">
             <cite class="reviews__author-name">Николай Петров</cite>
             <p class="reviews__about">25 лет, водитель трамвая</p>
@@ -169,7 +168,7 @@
           </div>
         </blockquote>
 
-        <blockquote class="reviews__item">
+        <blockquote class="reviews__item reviews__item-third">
           <div class="reviews__author-info">
             <cite class="reviews__author-name">Николай Петров</cite>
             <p class="reviews__about">25 лет, водитель трамвая</p>
@@ -177,15 +176,14 @@
           </div>
         </blockquote>
       </div>
-
-      <div class="price__slider-buttons">
-        <label class="reviews__slider-label" for="reviews-position-1"></label>
-        <label class="reviews__slider-label" for="reviews-position-2"></label>
-        <label class="reviews__slider-label" for="reviews-position-3"></label>
+      <div class="reviews__buttons">
+        <button class="review__button--enabled" type="button"></button>
+        <button class="review__button" type="button"></button>
+        <button class="review__button" type="button"></button>
       </div>
-
+      <button class="review__arrows-left" type="button" aria-label="Левый слайд"></button>
+      <button class="review__arrows-right" type="button" aria-label="правый слайд"></button>
     </section>
-
     <section class="price price__wrapper">
       <h2 class="visually-hidden">Цены</h2>
       <div class="price__slider">
@@ -196,7 +194,7 @@
           <tr>
             <th class="table__slide-heading"></th>
             <th class="table__slide-heading"><p class="table__slide-heading--rate">База</p><p class="table__slide-heading--price">1,99 USD</p></th>
-            <th class="table__slide-heading"><p class="table__slide-heading--rate">Стандарт</p><p class="table__slide-heading--price">3.99 USD</p></th>
+            <th class="table__slide-heading"><p class="table__slide-heading--rate table__slide-heading--hit">Стандарт</p><p class="table__slide-heading--price">3.99 USD</p></th>
             <th class="table__slide-heading"><p class="table__slide-heading--rate">Анлим</p><p class="table__slide-heading--price">9.99 USD</p></th>
           </tr>
           <tr>

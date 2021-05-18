@@ -7,32 +7,31 @@
 .form__button-container {
   text-align: center;
   margin-top: 31px;
+}
 
-  .form__button {
-    .green-button();
-    padding: 17px 59px 17px 59px;
+.form__button {
+  .green-button();
+  padding: 17px 59px 17px 59px;
 
-
-    &:hover {
-      background-color: @green-buttonhover;
-    }
-
-    &:active {
-      background-color: @green-buttonhover;
-      color: @white-opacity;
-    }
+  &:hover {
+    background-color: @green-buttonhover;
   }
 
-  .form__paragraph {
-    .set-fonts(400; 14px; 30px);
-    text-transform: uppercase;
-    margin: 0;
-    margin-top: 35px;
+  &:active {
+    background-color: @green-buttonhover;
+    color: @white-opacity;
   }
+}
 
-  .form__paragraph-long {
-    display: none;
-  }
+.form__paragraph {
+  .set-fonts(400; 14px; 30px);
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 35px;
+}
+
+.form__paragraph-long {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -44,25 +43,25 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 48px;
+  }
 
-    .form__button-container {
-      margin: 0 auto;
-      margin-top: 11px;
-      padding: 0;
-      order: 6;
-      width: 616px;
-      display: flex;
-      justify-content: space-between;
+  .form__button-container {
+    margin: 0 auto;
+    margin-top: 11px;
+    padding: 0;
+    order: 6;
+    width: 616px;
+    display: flex;
+    justify-content: space-between;
+  }
 
-      .form__paragraph {
-        margin: 0;
-        margin-top: 20px;
-      }
+  .form__paragraph {
+    margin: 0;
+    margin-top: 20px;
+  }
 
-      .form__button {
-        width: 296px;
-      }
-    }
+  .form__button {
+    width: 296px;
   }
 }
 
@@ -79,22 +78,21 @@
     margin: auto;
   }
 
-
   .form__button-container {
     order: 6;
     width: 940px;
     grid-column-start: 1;
     grid-column-end: 3;
     box-sizing: border-box;
+  }
 
-    .form__paragraph {
-      display: none;
-    }
+  .form__paragraph {
+    display: none;
+  }
 
-    .form__paragraph-long {
-      display: block;
-      .set-fonts(400; 14px; 30px);
-      color: @grey-clr;
-    }
+  .form__paragraph-long {
+    display: block;
+    .set-fonts(400; 14px; 30px);
+    color: @grey-clr;
   }
 }

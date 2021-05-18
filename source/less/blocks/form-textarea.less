@@ -1,55 +1,64 @@
 .form__textarea {
   border: none;
   margin-top: 35px;
+}
 
-  .form__textarea-legend {
-    .set-fonts(400; 14px; 30px);
-    color: @pink-clr;
-    text-transform: uppercase;
-    text-align: center;
-  }
+.form__textarea-legend {
+  .set-fonts(400; 14px; 30px);
+  color: @pink-clr;
+  text-transform: uppercase;
+  text-align: center;
+}
 
-  .form__textarea-input {
-    .set-fonts(400; 18px; 30px);
-    border: 2px solid @table;
-    color: @grey-clr;
-    text-align: left;
-    width: 100%;
-    box-sizing: border-box;
-    height: 197px;
-    padding-top: 15px;
-    padding-left: 20px;
-    outline: none;
-  }
+.form__textarea-input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 197px;
+  padding-top: 15px;
+  padding-left: 20px;
+  outline: none;
+  .set-fonts(400; 18px; 30px);
+  border: 2px solid @table;
+  color: @grey-clr;
+  text-align: left;
 }
 
 @media (min-width: @tablet-width) {
   .form__textarea {
     order: 5;
-    border: 2px solid @table;
-    width: 616px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     margin: 0 auto;
     margin-bottom: 51px;
     margin-top: 35px;
+
     padding: 0;
     padding-top: 30px;
     padding-bottom: 55px;
+    width: 616px;
 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px solid @table;
+  }
 
-    .form__textarea-input {
-      width: 496px;
-      height: 189px;
-      margin: auto;
-    }
+  .form__textarea-input {
+    width: 496px;
+    height: 189px;
+    margin: auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form__textarea {
     order: 5;
+    margin: 0;
+    margin-top: 73px;
+    margin-bottom: 69px;
+    padding: 30px 20px 30px 55px;
+    width: 936px;
+    box-sizing: border-box;
+
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -57,16 +66,10 @@
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 3;
-    display: block;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    width: 936px;
-    margin-top: 73px;
-
-    .form__textarea-input {
-      width: 920px;
-      padding: 20px 0 89px 20px;
-    }
+  }
+  .form__textarea-input {
+    width: 816px;
+    height: 124px;
+    padding: 20px 0 89px 20px;
   }
 }

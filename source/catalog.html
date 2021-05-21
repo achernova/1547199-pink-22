@@ -202,16 +202,16 @@
 
       <section class="post-filter post-filter__wrapper">
         <h2 class="visually-hidden">Фильтры</h2>
-        <p class="filter-intro">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        <p class="filter-intro">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
         <div class="post-filter__content">
-          <picture>
+          <picture class="filter__photo">
             <source media="(min-width: 1200px)" src="img/photo-filter-tablet.jpg 1x, img/photo-filter-tablet@2x 2x">
             <source media="(min-width: 660px)" src="img/photo-filter-tablet.jpg 1x, img/photo-filter-tablet@2x 2x">
             <img class="photo-card" src="img/photo-filter.jpg" srcset="img/photo-filter-mobile@2x.jpg 2x" alt="фильтры"/>
           </picture>
           <ul class="filter-list">
             <li class="filter-list__item">
-              <form class="filter-list__form catalog-filter__crop">
+              <form class="filter-list__form filter-list__form--crop">
                 <button class="filter__button" type="button">
                   <svg class="filter-icon" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.3">
@@ -219,13 +219,13 @@
                   </svg>
                 </button>
                 <div class="filter__range">
-                  <input class="range-line" type="range" id="fill" name="fill" min="1" max="100">
-                  <label class="range-line__label"></label>
+                  <input class="filter__range-line" type="range" id="crop" name="crop" min="1" max="100">
+                  <label class="range-line__label" for="crop"></label>
                 </div>
               </form>
             </li>
             <li class="filter-list__item">
-              <form class="filter-list__form catalog-filter__fill">
+              <form class="filter-list__form filter-list__form--fill">
                 <button class="filter__button" type="button">
                   <svg class="filter-icon" width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.3">
@@ -235,13 +235,13 @@
                   </svg>
                 </button>
                 <div class="filter__range">
-                  <input class="range-line" type="range" id="fill" name="fill" min="1" max="100">
+                  <input class="filter__range-line" type="range" id="fill" name="fill" min="1" max="100">
                   <label class="range-line__label" for="fill"></label>
                 </div>
               </form>
             </li>
             <li class="filter-list__item">
-              <form class="filter-list__form catalog-filter__contrast">
+              <form class="filter-list__form filter-list__form--contrast">
                 <button class="filter__button" type="button">
                   <svg class="filter-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.3">
@@ -251,8 +251,8 @@
                   </svg>
                 </button>
                 <div class="filter__range">
-                  <input class="range-line" type="range" id="fill" name="fill" min="1" max="100">
-                  <label class="range-line__label" for="fill"></label>
+                  <input class="filter__range-line" type="range" id="contrast" name="contrast" min="1" max="100">
+                  <label class="range-line__label" for="contrast"></label>
                 </div>
               </form>
             </li>
@@ -261,9 +261,9 @@
             <input class="filter__range-line" type="range" id="fill" name="fill" min="1" max="100">
             <label class="filter__range-label" for="fill"></label>
           </div>
-          <form class="post-form">
-            <button type="submit" class="post-button">Запостить</button>
-            <button type="button" class="cancel-button">Отмена</button>
+          <form class="filter__post-form">
+            <button type="submit" class="filter__post-button">Запостить</button>
+            <button type="button" class="filter__cancel-button">Отмена</button>
           </form>
         </div>
       </section>

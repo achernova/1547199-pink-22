@@ -1,5 +1,7 @@
 .post-filter {
+  display: block;
   text-align: center;
+  background-color: @background-light;
 }
 
 .filter-intro {
@@ -79,7 +81,7 @@
   }
 }
 
-.post-button {
+.filter__post-button {
   .border .bordered();
   .set-fonts(700; 18px; 18px);
   color: @pink-clr;
@@ -98,7 +100,7 @@
   }
 }
 
-.cancel-button {
+.filter__cancel-button {
   .border .bordered();
   .set-fonts(700; 18px; 18px);
   color: @grey-opacity-light;
@@ -122,13 +124,21 @@
   }
 
   .filter-intro {
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding-bottom: 75px;
     .set-fonts(400; 18px; 30px);
+    background-color: @white;
   }
 
   .post-filter__content {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 620px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    column-gap: 50px;
   }
 
   .filter__photo {
@@ -136,9 +146,25 @@
     grid-row-end: 3;
   }
 
+  .photo-card {
+    height: 400px;
+  }
+
   .filter-list {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .catalog-filter__contrast {
+    margin-left: 8px;
+  }
+
+  .filter-list__form--fill .filter__range {
+    margin-left: 16px;
+  }
+
+  .filter-list__form--contrast .filter__range {
+    margin-left: 24px;
   }
 
   .filter-list__form {
@@ -147,10 +173,10 @@
 
   .filter__range {
     display: block;
-    margin-left: 28px;
+    margin-left: 20px;
   }
 
-  .range-line {
+  .filter__range-line {
     appearance: none;
     width: 202px;
     height: 2px;
@@ -166,18 +192,44 @@
       border: 2px solid @pink-clr;
       border-radius: 50%;
     }
+
+      &::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      background-color: @background-light;
+      border: 2px solid @pink-clr;
+      border-radius: 50%;
+    }
+  }
+
+  .filter__post-form {
+    margin-top: 66px;
   }
 
   .filter__range-mobile {
     display: none;
   }
 
-  .post-button {
+  .filter__post-button {
     width: 260px;
   }
 
-  .cancel-button {
+  .filter__cancel-button {
     width: 260px;
+  }
+
+  .filter-list__item {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 275px;
+      height: 1px;
+      top: 65px;
+      left: 10px;
+      background-image: url("../img/line-filter.svg");
+    }
   }
 }
 
@@ -187,26 +239,45 @@
     margin: 0 auto;
   }
 
+  .post-filter__content {
+    width: 940px;
+    padding: 0;
+  }
+
   .filter__photo {
+    display: block;
+    .reset-list .indent();
     margin-left: 80px;
     margin-top: 57px;
+    margin-bottom: 57px;
   }
 
   .filter-list {
     margin-top: 57px;
   }
 
-  .filter__range {
+  .filter__range-line {
     width: 288px;
   }
 
-  .post-form {
-    margin-top: 181px;
+  .filter__post-form {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 
-  .post-button {
-    width: 183px;
+
+  .filter-list__item {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 410px;
+      height: 1px;
+      top: 20px;
+      left: 10px;
+      background-image: url("../img/line-filter-desk.svg");
+    }
   }
 }

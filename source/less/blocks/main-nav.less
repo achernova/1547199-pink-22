@@ -118,7 +118,7 @@
 }
 
 .main-nav--closed .main-nav__logo-container {
-  background-color: @grey-opacity;
+  background-color: transparent;
   border: none;
 }
 
@@ -179,7 +179,6 @@
 
 .main-nav--nojs .user-list__item {
   display: block;
-  background-color: #6a4d38;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -244,16 +243,19 @@
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    width: 940px;
+    width: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: transparent;
     margin: 0;
   }
 
-    .main-nav__toggle {
-      display: none;
-    }
+  .main-nav__list {
+    margin-right: 130px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
 
   .main-nav__logo-container {
     height: 110px;

@@ -152,6 +152,8 @@
     <section class="reviews reviews__wrapper">
       <h2 class="visually-hidden">Отзывы</h2>
       <div class="reviews__slider">
+        <input class="reviews__slider-radio" type="radio" id="reviews-position-1" name="reviews-position">
+        <input class="reviews__slider-radio" type="radio" id="reviews-position-2" name="reviews-position" checked>
         <blockquote class="reviews__item reviews__item-first">
           <div class="reviews__author-info">
             <cite class="reviews__author-name">Николай Петров</cite>
@@ -175,14 +177,16 @@
             <p class="reviews__description">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </div>
         </blockquote>
+        <div class="reviews__buttons">
+          <button class="review__button--enabled" type="button"></button>
+          <button class="review__button" type="button"></button>
+          <button class="review__button" type="button"></button>
+        </div>
+        <div class="reviews__slider-buttons">
+          <label class="reviews__slider-label--left" for="reviews-position-1"></label>
+          <label class="reviews__slider-label--right" for="reviews-position-2"></label>
+        </div>
       </div>
-      <div class="reviews__buttons">
-        <button class="review__button--enabled" type="button"></button>
-        <button class="review__button" type="button"></button>
-        <button class="review__button" type="button"></button>
-      </div>
-      <button class="review__arrows-left" type="button" aria-label="Левый слайд"></button>
-      <button class="review__arrows-right" type="button" aria-label="правый слайд"></button>
     </section>
     <section class="price price__wrapper">
       <h2 class="visually-hidden">Цены</h2>

@@ -33,21 +33,19 @@
     height: 110px;
   }
 
-  .intro-background {
-    background-image: url("../img/back-mobile-big.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: @background-grey;
-    position: relative;
-    top: -110px;
-    z-index: -1;
-  }
-
   .page-intro {
     .set-fonts(300; 50px; 68px);
     text-align: center;
     padding: 175px 30px 57px 30px;
     margin: 0;
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .intro-background {
+      top: -110px;
+      background-image: url("../img/back-mobile-big@2x.jpg");
+      background-size: 729px auto;
+    }
   }
 }
 
@@ -57,18 +55,16 @@
     height: 110px;
   }
 
-  .intro-background {
-    background-image: url("../img/back-mobile-large.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: @background-grey;
-    position: relative;
-    top: -140px;
-    z-index: -1;
-  }
-
   .page-intro {
     padding: 200px 100px 90px 100px;
     margin: 0;
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .intro-background {
+      top: -140px;
+      background-image: url("../img/back-mobile-large@2x.jpg");
+      background-size: cover;
+    }
   }
 }

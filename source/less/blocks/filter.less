@@ -1,15 +1,20 @@
-.post-filter {
+.filter {
   display: block;
   text-align: center;
-  background-color: @background-light;
 }
 
 .filter-intro {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  width: 260px;
   .set-fonts(400; 14px; 30px);
   text-align: center;
 }
 
-.post-filter__content {
+.filter__content {
+  padding-top: 20px;
+  padding-bottom: 30px;
   background-color: @background-light;
 }
 
@@ -63,7 +68,7 @@
   border: 1px solid @grey-clr;
   cursor: pointer;
 
-    &::-webkit-slider-thumb {
+  &::-webkit-slider-thumb {
     appearance: none;
     width: 14px;
     height: 14px;
@@ -119,19 +124,20 @@
 }
 
 @media (min-width: @tablet-width) {
-  .post-filter__wrapper {
+  .filter__wrapper {
     width: 660px;
   }
 
   .filter-intro {
     margin-top: 40px;
     margin-bottom: 0;
+    width: 430px;
     padding-bottom: 75px;
     .set-fonts(400; 18px; 30px);
     background-color: @white;
   }
 
-  .post-filter__content {
+  .filter__content {
     margin: 0 auto;
     padding: 0 20px;
     width: 620px;
@@ -147,7 +153,7 @@
   }
 
   .photo-card {
-    height: 400px;
+    height: 100%;
   }
 
   .filter-list {
@@ -155,7 +161,7 @@
     align-items: flex-start;
   }
 
-  .catalog-filter__contrast {
+  .filter-list__form--contrast {
     margin-left: 8px;
   }
 
@@ -193,7 +199,7 @@
       border-radius: 50%;
     }
 
-      &::-moz-range-thumb {
+    &::-moz-range-thumb {
       width: 14px;
       height: 14px;
       background-color: @background-light;
@@ -203,7 +209,7 @@
   }
 
   .filter__post-form {
-    margin-top: 66px;
+    margin-top: 58px;
   }
 
   .filter__range-mobile {
@@ -234,14 +240,19 @@
 }
 
 @media (min-width: @desktop-width) {
-  .post-filter__wrapper {
+  .filter__wrapper {
     width: 940px;
     margin: 0 auto;
   }
 
-  .post-filter__content {
+  .filter__content {
     width: 940px;
     padding: 0;
+  }
+
+  .filter-intro {
+    width: 430px;
+    .set-fonts(400; 18px; 30px);
   }
 
   .filter__photo {
@@ -263,9 +274,17 @@
   .filter__post-form {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 185px;
   }
 
+  .filter__post-button,
+  .filter__cancel-button {
+    margin-right: 25px;
+    height: 55px;
+    width: 183px;
+    padding: 0;
+  }
 
   .filter-list__item {
     position: relative;
@@ -275,7 +294,6 @@
       content: "";
       width: 410px;
       height: 1px;
-      top: 20px;
       left: 10px;
       background-image: url("../img/line-filter-desk.svg");
     }

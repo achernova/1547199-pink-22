@@ -22,6 +22,8 @@
 .main-nav__logo-container {
   display: block;
   min-height: 66px;
+  background-color: @grey-clr;
+  border-bottom: 1px solid @black;
 }
 
 .main-nav__logo-link {
@@ -111,12 +113,6 @@
   box-shadow: 0 8px 0 0 fade(@pink-clr, 30%), 0 16px 0 0 fade(@pink-clr, 30%);
 }
 
-
-.main-nav__logo-container {
-  background-color: @grey-clr;
-  border-bottom: 1px solid @black;
-}
-
 .main-nav--closed .main-nav__logo-container {
   background-color: transparent;
   border: none;
@@ -191,11 +187,8 @@
   }
 }
 
-
-
-
 @media (min-width: @tablet-width) {
-  .main-nav {
+  .main-nav__wrapper {
     width: 660px;
   }
 
@@ -309,9 +302,5 @@
 
   .main-nav--closed .site-list__item {
     display: block;
-  }
-
-  .main-nav__toggle {
-    display: none;
   }
 }

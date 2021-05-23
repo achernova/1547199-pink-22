@@ -16,7 +16,7 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__logo-container">
-        <a href="#" class="main-nav__logo-link">
+        <a href="index.html" class="main-nav__logo-link">
           <span class="visually-hidden">Логотип "PINK"</span>
           <svg class="logo-mobile" width="74" height="23" viewBox="0 0 74 23" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.00496827 1.54857C0.00487772 1.21254 0.135804 0.889818 0.369742 0.649431C0.60368 0.409043 0.922049 0.27008 1.25676 0.262266H8.39001C13.4469 0.262266 16.7751 2.9645 16.7751 7.39179V7.45162C16.7751 12.2977 12.7415 14.8105 7.97274 14.8105H2.53836V21.611C2.55394 21.7874 2.53277 21.9651 2.47619 22.1329C2.41961 22.3006 2.32887 22.4547 2.20973 22.5854C2.09058 22.716 1.94565 22.8204 1.78416 22.8918C1.62266 22.9631 1.44812 23 1.27166 23C1.0952 23 0.920671 22.9631 0.759173 22.8918C0.597674 22.8204 0.452744 22.716 0.333602 22.5854C0.21446 22.4547 0.123708 22.3006 0.0671295 22.1329C0.0105515 21.9651 -0.0106138 21.7874 0.00496827 21.611V1.54857ZM8.07209 12.5171C11.7778 12.5171 14.2119 10.5228 14.2119 7.53139V7.47156C14.2119 4.26078 11.8175 2.59556 8.25092 2.59556H2.58804V12.4772L8.07209 12.5171Z" fill="white"/>
@@ -75,11 +75,11 @@
       <section class="catalog catalog__wrapper">
         <h2 class="intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
         <div class="popular-photo">
-          <article class="popular-photo__image">
+          <figure class="popular-photo__image">
             <div class="popular-photo__content">
               <picture>
-                <source media="(min-width: 1200px)" src="img/panorama-desctop.jpg 1x, img/panorama-desctop@2x.jpg 2x">
-                <source media="(min-width: 660px)" src="img/panorama-tablet.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/panorama-desctop.jpg 1x, img/panorama-desctop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/panorama-tablet.jpg 1x, img/panorama-tablet@2x.jpg 2x">
                 <img class="photo-card-large" src="img/img-anna.jpg" srcset="img/img-anna-mobile@2x.jpg 2x" alt="фото Анна"/>
               </picture>
             </div>
@@ -91,14 +91,14 @@
               <p class="popular-photo__paragraph">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
               <a href="catalog.html?liked" class="popular-photo__like">Нравится: 215</a>
             </figcaption>
-          </article>
+          </figure>
         </div>
         <ul class="catalog-list catalog-list__wrapper">
           <li class="catalog-list__item">
-            <article class="catalog-list__image">
+            <figure class="catalog-list__image">
               <picture>
-                <source media="(min-width: 1200px)" src="img/img-levon-desktop.jpg 1x, img/img-levon-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" src="img/img-levon-tablet.jpg 1x, img/img-levon-tablet@2x 2x">
+                <source media="(min-width: 1200px)" srcset="img/img-levon-desktop.jpg 1x, img/img-levon-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/img-levon-tablet.jpg 1x, img/img-levon-tablet@2x 2x">
                 <img class="catalog-list__photo-card" src="img/img-levon.jpg" srcset="img/img-levon-mobile@2x.jpg 2x" alt="фото Левон"/>
               </picture>
               <figcaption class="catalog-list__description">
@@ -109,13 +109,13 @@
                 <p class="catalog-list__paragraph">Вчера он на луну летал, сегодня в руки к нам попал.</p>
                 <a href="catalog.html?liked" class="catalog-list__like">Нравится: 356</a>
               </figcaption>
-            </article>
+            </figure>
           </li>
           <li class="catalog-list__item">
-            <article class="catalog-list__image">
+            <figure class="catalog-list__image">
               <picture>
-                <source media="(min-width: 1200px)" src="img/img-anton-desktop.jpg 1x, img/img-anton-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" src="img/img-anton-tablet.jpg 1x, img/img-anton-tablet@2x 2x">
+                <source media="(min-width: 1200px)" srcset="img/img-anton-desktop.jpg 1x, img/img-anton-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/img-anton-tablet.jpg 1x, img/img-anton-tablet@2x 2x">
                 <img class="catalog-list__photo-card" src="img/img-anton.jpg" srcset="img/img-anton-mobile@2x.jpg 2x" alt="фото Антон"/>
               </picture>
               <figcaption class="catalog-list__description">
@@ -126,13 +126,13 @@
                 <p class="catalog-list__paragraph">Соседи будут рады!</p>
                 <a href="catalog.html?liked" class="catalog-list__like">Нравится: 666</a>
               </figcaption>
-            </article>
+            </figure>
           </li>
           <li class="catalog-list__item">
-            <article class="catalog-list__image">
+            <figure class="catalog-list__image">
               <picture>
-                <source media="(min-width: 1200px)" src="img/img-boris-desktop.jpg 1x, img/img-boris-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" src="img/img-boris-tablet.jpg 1x, img/img-boris-tablet@2x 2x">
+                <source media="(min-width: 1200px)" srcset="img/img-boris-desktop.jpg 1x, img/img-boris-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/img-boris-tablet.jpg 1x, img/img-boris-tablet@2x 2x">
                 <img class="catalog-list__photo-card" src="img/img-boris.jpg" srcset="img/img-boris-mobile@2x.jpg 2x" alt="фото Борис"/>
               </picture>
               <figcaption class="catalog-list__description">
@@ -143,13 +143,13 @@
                 <p class="catalog-list__paragraph">Здесь могла быть ваша цитата о высоком и вечном.</p>
                 <a href="catalog.html?liked" class="catalog-list__like">Нравится: 215</a>
               </figcaption>
-            </article>
+            </figure>
           </li>
           <li class="catalog-list__item">
-            <article class="catalog-list__image">
+            <figure class="catalog-list__image">
               <picture>
-                <source media="(min-width: 1200px)" src="img/img-sergey-desktop.jpg 1x, img/img-sergey-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" src="img/img-sergey-tablet.jpg 1x, img/img-sergey-tablet@2x 2x">
+                <source media="(min-width: 1200px)" srcset="img/img-sergey-desktop.jpg 1x, img/img-sergey-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/img-sergey-tablet.jpg 1x, img/img-sergey-tablet@2x 2x">
                 <img class="catalog-list__photo-card" src="img/img-sergey.jpg" srcset="img/img-sergey-mobile@2x.jpg 2x" alt="фото Сергей"/>
               </picture>
               <figcaption class="catalog-list__description">
@@ -160,13 +160,13 @@
                 <p class="catalog-list__paragraph">Самая кубанская в мире!</p>
                 <a href="catalog.html?liked" class="catalog-list__like">Нравится: 4</a>
               </figcaption>
-            </article>
+            </figure>
           </li>
           <li class="catalog-list__item">
-            <article class="catalog-list__image">
+            <figure class="catalog-list__image">
               <picture>
-                <source media="(min-width: 1200px)" src="img/img-maxim-desktop.jpg 1x, img/img-maxim-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" src="img/img-maxim-tablet.jpg 1x, img/img-maxim-tablet@2x 2x">
+                <source media="(min-width: 1200px)" srcset="img/img-maxim-desktop.jpg 1x, img/img-maxim-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/img-maxim-tablet.jpg 1x, img/img-maxim-tablet@2x 2x">
                 <img class="catalog-list__photo-card" src="img/img-maxim.jpg" srcset="img/img-maxim-mobile@2x.jpg 2x" alt="фото Максим"/>
               </picture>
               <figcaption class="catalog-list__description">
@@ -177,13 +177,13 @@
                 <p class="catalog-list__paragraph">Где снег-то?</p>
                 <a href="catalog.html?liked" class="catalog-list__like">Нравится: 150</a>
               </figcaption>
-            </article>
+            </figure>
           </li>
           <li class="catalog-list__item">
-            <article class="catalog-list__image">
+            <figure class="catalog-list__image">
               <picture>
-                <source media="(min-width: 1200px)" src="img/img-nadejda-desktop.jpg 1x, img/img-nadejda-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" src="img/img-nadejda-tablet.jpg 1x, img/img-nadejda-tablet@2x 2x">
+                <source media="(min-width: 1200px)" srcset="img/img-nadejda-desktop.jpg 1x, img/img-nadejda-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/img-nadejda-tablet.jpg 1x, img/img-nadejda-tablet@2x 2x">
                 <img class="catalog-list__photo-card" src="img/img-nadejda.jpg" srcset="img/img-nadejda-mobile@2x.jpg 2x" alt="фото Надежда"/>
               </picture>
               <figcaption class="catalog-list__description">
@@ -194,19 +194,19 @@
                 <p class="catalog-list__paragraph">Всем GM и взаимные лайки!</p>
                 <a href="catalog.html?liked" class="catalog-list__like">Нравится: 2560</a>
               </figcaption>
-            </article>
+            </figure>
           </li>
         </ul>
 
       </section>
 
-      <section class="post-filter post-filter__wrapper">
+      <section class="filter filter__wrapper">
         <h2 class="visually-hidden">Фильтры</h2>
         <p class="filter-intro">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
-        <div class="post-filter__content">
+        <div class="filter__content">
           <picture class="filter__photo">
-            <source media="(min-width: 1200px)" src="img/photo-filter-tablet.jpg 1x, img/photo-filter-tablet@2x 2x">
-            <source media="(min-width: 660px)" src="img/photo-filter-tablet.jpg 1x, img/photo-filter-tablet@2x 2x">
+            <source media="(min-width: 1200px)" srcset="img/photo-filter-tablet.jpg 1x, img/photo-filter-tablet@2x 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-filter-tablet.jpg 1x, img/photo-filter-tablet@2x 2x">
             <img class="photo-card" src="img/photo-filter.jpg" srcset="img/photo-filter-mobile@2x.jpg 2x" alt="фильтры"/>
           </picture>
           <ul class="filter-list">
@@ -258,8 +258,8 @@
             </li>
           </ul>
           <div class="filter__range-mobile">
-            <input class="filter__range-line" type="range" id="fill" name="fill" min="1" max="100">
-            <label class="filter__range-label" for="fill"></label>
+            <input class="filter__range-line" type="range" id="fills" name="fills" min="1" max="100">
+            <label class="filter__range-label" for="fills"></label>
           </div>
           <form class="filter__post-form">
             <button type="submit" class="filter__post-button">Запостить</button>
@@ -273,7 +273,7 @@
   <footer class="page-footer">
 
     <div class="page-footer__logo">
-      <a class="page-footer__logo">
+      <a href="index.html" class="page-footer__logo">
         <span class="visually-hidden">Логотип "PINK"</span>
         <svg width="145" height="40" viewBox="0 0 145 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M71.005 18.5486C71.0049 18.2125 71.1358 17.8898 71.3697 17.6494C71.6037 17.409 71.922 17.2701 72.2568 17.2623H79.39C84.4469 17.2623 87.7751 19.9645 87.7751 24.3918V24.4516C87.7751 29.2977 83.7415 31.8105 78.9727 31.8105H73.5384V38.611C73.5539 38.7874 73.5328 38.9651 73.4762 39.1329C73.4196 39.3006 73.3289 39.4547 73.2097 39.5854C73.0906 39.716 72.9457 39.8204 72.7842 39.8918C72.6227 39.9631 72.4481 40 72.2717 40C72.0952 40 71.9207 39.9631 71.7592 39.8918C71.5977 39.8204 71.4527 39.716 71.3336 39.5854C71.2145 39.4547 71.1237 39.3006 71.0671 39.1329C71.0106 38.9651 70.9894 38.7874 71.005 38.611V18.5486ZM79.0721 29.5171C82.7778 29.5171 85.2119 27.5228 85.2119 24.5314V24.4716C85.2119 21.2608 82.8175 19.5956 79.2509 19.5956H73.588V29.4772L79.0721 29.5171Z" fill="#283645"/>

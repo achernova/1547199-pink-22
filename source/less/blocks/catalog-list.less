@@ -8,23 +8,30 @@
 
 .catalog-list__item {
   display: block;
+  box-sizing: border-box;
   margin: 0 auto;
   margin-bottom: 20px;
   width: 280px;
-  padding-bottom: 26px;
   background-color: @background-light;
 }
 
 .catalog-list__image {
   display: block;
-  height: 180px;
-  margin-bottom: 220px;
+  box-sizing: border-box;
 }
 
 .catalog-list__autor {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.catalog-list__description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: @background-light;
 }
 
 .catalog-list__name {
@@ -34,21 +41,23 @@
 }
 
 .catalog-list__time {
+  margin: 0;
   .set-fonts(300; 12px; 24px);
   text-transform: uppercase;
 }
 
 .catalog-list__paragraph {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding: 0 20px;
   .set-fonts(400; 14px; 24px);
 }
 
 .catalog-list__like {
   position: relative;
-  margin: 0 auto;
+  display: block;
   padding-left: 50px;
+  padding-bottom: 20px;
   .set-fonts(400; 14px; 24px);
   text-transform: uppercase;
   color: @pink-clr;
@@ -56,7 +65,7 @@
   &::before {
     position: absolute;
     content: "";
-    top: 1px;
+    top: 5px;
     left: 20px;
     width: 13px;
     height: 12px;

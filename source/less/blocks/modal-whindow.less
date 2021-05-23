@@ -5,8 +5,6 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  top: 120px;
-  bottom: auto;
   width: 320px;
   background-color: @white;
   text-align: center;
@@ -16,7 +14,7 @@
 .modal__title {
   .set-fonts(700; 18px; 24px);
   color: @black;
-  }
+}
 
 .modal__paragraph {
   .set-fonts(400; 14px; 24px);
@@ -36,10 +34,14 @@
   display: none;
 }
 
-.modal__button-conteiner {
-  background-color: @background-light;
-}
-
 .modal__failure {
   display: none;
+}
+
+.modal__show {
+  display: block;
+}
+
+.modal__button-container {
+  background-color: @background-light;
 }

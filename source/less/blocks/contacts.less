@@ -23,12 +23,15 @@
 }
 
 .contacts__link {
+  .set-fonts(300; 24px; 33px);
+  color: @pink-clr;
+
   &:hover {
-    color:@grey-clr;
+    color: @grey-clr;
   }
 
   &:active {
-    color:@grey-opacity;
+    color: @grey-opacity;
   }
 }
 
@@ -39,11 +42,6 @@
 .contacts__text {
   .set-fonts(700; 18px; 25px);
   margin: 0 auto;
-}
-
-.contacts__link {
-  .set-fonts(300; 24px; 33px);
-  color: @pink-clr;
 }
 
 .address {
@@ -58,7 +56,6 @@
   margin: 0 auto;
   background-image: url("../img/map-mobile.jpg");
   background-repeat: no-repeat;
-  background-color: @background-grey;
   border: none;
 
   &::after {
@@ -82,7 +79,6 @@
   .contacts__title {
     margin: 0 auto;
     margin-bottom: 35px;
-    width: 370px;
     .set-fonts(300; 40px; 54px);
   }
 
@@ -94,6 +90,7 @@
   }
 
   .contacts__text {
+    margin-bottom: 4px;
     .set-fonts(700; 18px; 25px);
   }
 
@@ -102,10 +99,6 @@
     margin-top: 23px;
     width: 211px;
     align-self: center;
-  }
-
-  .contacts__text {
-    margin-bottom: 4px;
   }
 
   .contacts__maps {
@@ -125,15 +118,13 @@
   }
 
   @media (min-resolution: 1.5dppx) {
-  .contacts__maps {
-    background-image: url("../img/map-mobile.jpg@2x.jpg");
-    background-repeat: no-repeat;
-    background-size: 660px auto;
-    background-repeat: no-repeat;
-    background-color: @background-grey;
-
-      }
+    .contacts__maps {
+      background-image: url("../img/map-tablet@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: 660px auto;
     }
+  }
+
   .map {
     width: 660px;
     height: 374px;
@@ -162,12 +153,6 @@
 
   .contacts__maps {
     position: relative;
-    width: 1200px;
-    height: 502px;
-    background-image: url("../img/map-desctop.jpg");
-    background-repeat: no-repeat;
-    background-color: @background-grey;
-    border: none;
 
     &::after {
       position: absolute;
@@ -179,6 +164,14 @@
       background-image: url("../img/triangle-white-footer.svg");
       background-repeat: no-repeat;
       background-size: 100% 123px;
+    }
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .contacts__maps {
+      background-image: url("../img/map-desktop@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: 660px auto;
     }
   }
 

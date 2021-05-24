@@ -58,6 +58,14 @@
   background-repeat: no-repeat;
   border: none;
 
+  @media (min-resolution: 2dppx) {
+    .contacts__maps {
+      background-image: url("../img/map-mobile@2x.jpg");
+      background-repeat: no-repeat;
+      border: none;
+    }
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -103,6 +111,17 @@
 
   .contacts__maps {
     position: relative;
+    background-image: url("../img/map-tablet.jpg");
+    background-repeat: no-repeat;
+    border: none;
+
+    @media (min-resolution: 2dppx) {
+      .contacts__maps {
+        background-image: url("../img/map-tablet@2x.jpg");
+        background-repeat: no-repeat;
+        border: none;
+      }
+    }
 
     &::after {
       position: absolute;
@@ -117,14 +136,6 @@
     }
   }
 
-  @media (min-resolution: 1.5dppx) {
-    .contacts__maps {
-      background-image: url("../img/map-tablet@2x.jpg");
-      background-repeat: no-repeat;
-      background-size: 660px auto;
-    }
-  }
-
   .map {
     width: 660px;
     height: 374px;
@@ -134,16 +145,20 @@
 @media (min-width: @desktop-width) {
   .contacts__wrapper {
     width: 1200px;
+    margin-bottom: 15px;
   }
 
   .contacts__title {
     width: 490px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    margin-top: 71px;
     .set-fonts(300; 50px; 68px);
   }
 
   .contacts__content {
     margin: 0 auto;
+    padding: 0 107px;
+    align-items: flex-start;
   }
 
   .contacts__item {
@@ -151,8 +166,35 @@
     margin-bottom: 20px;
   }
 
+  .contacts__text {
+    margin-bottom: 18px;
+  }
+
+  .contacts__phone {
+    order: 1;
+  }
+
+  .contacts__address {
+    order: 2;
+  }
+
+  .contacts__mail {
+    order: 3;
+  }
+
   .contacts__maps {
     position: relative;
+    background-image: url("../img/map-desktop.jpg");
+    background-repeat: no-repeat;
+    border: none;
+
+    @media (min-resolution: 2dppx) {
+      .contacts__maps {
+        background-image: url("../img/map-desktop@2x.jpg");
+        background-repeat: no-repeat;
+        border: none;
+      }
+    }
 
     &::after {
       position: absolute;
@@ -164,14 +206,6 @@
       background-image: url("../img/triangle-white-footer.svg");
       background-repeat: no-repeat;
       background-size: 100% 123px;
-    }
-  }
-
-  @media (min-resolution: 1.5dppx) {
-    .contacts__maps {
-      background-image: url("../img/map-desktop@2x.jpg");
-      background-repeat: no-repeat;
-      background-size: 660px auto;
     }
   }
 

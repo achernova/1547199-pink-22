@@ -10,30 +10,9 @@
   position: relative;
   margin: 0 auto;
   margin-top: 90px;
-  padding: 0 20px 320px 20px;
+  padding: 38px 20px 320px 20px;
   .set-fonts(300; 24px; 29px);
   text-align: center;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 90px;
-    left: -5px;
-    width: 320px;
-    height: 286px;
-    background-image: url("../img/phone.png");
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    left: 100px;
-    top: 122px;
-    width: 111px;
-    height: 197px;
-    background-image: url("../img/phone-screen.png");
-    background-repeat: no-repeat;
-  }
 }
 
 .download__content {
@@ -99,43 +78,35 @@
 
 .download__background {
   position: relative;
-  top: -66px;
-  background-image: url("../img/back-mobile.jpg");
-  background-repeat: no-repeat;
+  top: -100px;
+  background:
+    url("../img/phone-screen@1x.png") 51% 43% no-repeat,
+    url("../img/phone@1x.png") 100% 44% no-repeat,
+    url("../img/back-mobile@1x.jpg") 100% 11% no-repeat;
+  background-size: auto, auto, 320px 462px;
   background-color: @background-grey;
-  background-size: 100%;
+
+  @media (min-resolution: 2dppx) {
+    .download__background {
+      background:
+        url("../img/phone-screen@2x.png") no-repeat,
+        url("../img/phone@2x.png") no-repeat,
+        url("../img/back-mobile@2x.jpg");
+      background-size: auto, auto, 320px 462px;
+    }
+  }
 }
+
 
 @media (min-width: @tablet-width) {
   .download__wrapper {
     position: relative;
     width: 660px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 185px;
-      left: 1px;
-      width: 660px;
-      height: 545px;
-      background-image: url("../img/phone-big.png");
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      left: 372px;
-      top: 240px;
-      width: 195px;
-      height: 3467px;
-      background-image: url("../img/phone-screen-tablet.png");
-      background-repeat: no-repeat;
-    }
   }
 
   .download__title {
     margin-left: 57px;
-    margin-top: 205px;
+    margin-top: 340px;
     width: 230px;
     padding: 0;
     .set-fonts(300; 40px; 48px);
@@ -178,12 +149,24 @@
     .set-fonts(300; 18px; 24px);
   }
 
-  @media (min-resolution: 1.5dppx) {
-    .download__background {
-      top: -110px;
-      padding-bottom: 85px;
-      background-image: url("../img/back-mobile-big@2x.jpg");
-      background-size: 729px auto;
+  .download__background {
+    position: relative;
+    top: -109px;
+    background:
+      url("../img/phone-screen-tablet@1x.png") 80% 66% no-repeat,
+      url("../img/phone-tablet@1x.png") 100% 100% no-repeat,
+      url("../img/back-tablet@1x.jpg") 100% no-repeat;
+    background-size: auto, auto, 729px auto;
+    background-color: @background-grey;
+
+    @media (min-resolution: 2dppx) {
+      .download__background {
+        background:
+          url("../img/phone-screen-tablet@2x.png") 51% 59% no-repeat,
+          url("../img/phone-tablet@2x.png") 100% 62% no-repeat,
+          url("../img/back-tablet@2x.jpg") 100% no-repeat;
+        background-size: auto, auto, 729px auto;
+      }
     }
   }
 }
@@ -192,32 +175,11 @@
   .download__wrapper {
     position: relative;
     width: 1200px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 205px;
-      left: 145px;
-      width: 1050px;
-      height: 645px;
-      background-image: url("../img/phone-desctop.png");
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      left: 715px;
-      top: 267px;
-      width: 230px;
-      height: 408px;
-      background-image: url("../img/phone-screen-desctop.png");
-      background-repeat: no-repeat;
-    }
   }
 
   .download__title {
     width: 300px;
-    padding-right: 746px;
+    margin-top: 206px;
     padding-left: 70px;
     .set-fonts(300; 50px; 68px);
   }
@@ -244,11 +206,25 @@
     .set-fonts(300; 18px; 24px);
   }
 
-  @media (min-resolution: 1.5dppx) {
-    .download__background {
-      background-image: url("../img/back-mobile-large@2x.jpg");
-      background-size: cover;
-      background-position: 50% 0;
+  .download__background {
+    position: relative;
+    top: -109px;
+    padding-bottom: 57px;
+    background:
+      url("../img/phone-screen-desktop@1x.png") 74% 60% no-repeat,
+      url("../img/phone-desktop@1x.png") 100% 100% no-repeat,
+      url("../img/back-desktop@1x.jpg") 100% 4% no-repeat;
+    background-size: auto, auto, cover;
+    background-color: @background-grey;
+
+    @media (min-resolution: 2dppx) {
+      .download__background {
+        background:
+          url("../img/phone-screen-desktop@2x.png") 51% 59% no-repeat,
+          url("../img/phone-desktop@2x.png") 100% 62% no-repeat,
+          url("../img/back-desktop@2x.jpg") 100% no-repeat;
+        background-size: auto, auto, 729px auto;
+      }
     }
   }
 }

@@ -1,11 +1,19 @@
 .price {
   display: block;
-  background-image: url("../img/grey-background-table.png");
+  background-image: url("../img/grey-background-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
   padding-top: 120px;
   padding-bottom: 1px;
+
+  @media (min-resolution: 2dppx) {
+    .price {
+      background-image: url("../img/grey-background-mobile@2x.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 }
 
 .price__slider {
@@ -127,7 +135,7 @@
   border: 3px solid @grey-clr;
 }
 
-#table-position-1:checked   ~ .price__slider-table {
+#table-position-1:checked ~ .price__slider-table {
   transform: translateX(-135px);
 }
 
@@ -143,7 +151,7 @@
   border: 3px solid @grey-clr;
 }
 
-#table-position-3:checked  ~ .price__slider-table {
+#table-position-3:checked ~ .price__slider-table {
   transform: translateX(-690px);
 }
 
@@ -153,6 +161,7 @@
   position: absolute;
   bottom: 50px;
   width: 100%;
+  cursor: pointer;
 }
 
 .price__slider-label {
@@ -173,11 +182,24 @@
     width: 660px;
   }
 
+  .price {
+    background-image: url("../img/grey-background-tablet.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      .price {
+        background-image: url("../img/grey-background-tablet@2x.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
   .price__slider {
     box-sizing: border-box;
     background-color: @background-light-table;
     margin: 0 auto;
-    margin-bottom: 70px;
     max-width: 100%;
   }
 
@@ -252,14 +274,23 @@
 
   .price {
     display: block;
-    background-image: url("../img/grey-background-desctop.png");
+    background-image: url("../img/grey-background-desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      .price {
+        background-image: url("../img/grey-background-desktop@2x.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
   }
 
   .price__slider-table {
-    left: 530px;
+    left: 541px;
     width: 940px;
+    margin-top: 33px;
   }
 
   .table__slide-heading {

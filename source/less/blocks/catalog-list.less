@@ -18,6 +18,7 @@
 .catalog-list__image {
   display: block;
   box-sizing: border-box;
+  margin: 0;
 }
 
 .catalog-list__autor {
@@ -58,7 +59,7 @@
   display: block;
   padding-left: 50px;
   padding-bottom: 20px;
-  .set-fonts(400; 14px; 24px);
+  .set-fonts(400; 12px; 24px);
   text-transform: uppercase;
   color: @pink-clr;
 
@@ -89,7 +90,7 @@
     width: 300px;
   }
 
-  .photo-card {
+  .catalog-list__photo-card {
     width: 100%;
     height: 300px;
   }
@@ -99,6 +100,23 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .catalog-list__autor {
+    margin-top: 20px;
+  }
+
+  .catalog-list__like {
+    position: relative;
+    padding-left: 20px;
+    .set-fonts(400; 12px; 24px);
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 258px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -106,8 +124,33 @@
     width: 940px;
   }
 
-  .photo-card {
+  .catalog-list__item {
+    margin-bottom: 55px;
+  }
+
+  .catalog-list__image {
+    margin: 0;
+  }
+
+  .catalog-list__photo-card {
     width: 100%;
     height: 400px;
+  }
+
+  .catalog-list__autor {
+    margin-top: 20px;
+  }
+
+  .catalog-list__like {
+    position: relative;
+    padding-left: 30px;
+    .set-fonts(400; 12px; 24px);
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 258px;
+    }
   }
 }

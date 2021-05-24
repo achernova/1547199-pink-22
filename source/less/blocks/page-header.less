@@ -8,23 +8,35 @@
   z-index: 1;
 }
 
-.intro-background {
-  background-image: url("../img/back-mobile.jpg");
+.page-header__page-intro {
+  background-image: url("../img/back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-color: @background-grey;
   background-size: cover;
   position: relative;
-  top: -90px;
+  top: -67px;
   z-index: -1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.jpg");
+    background-size: cover;
+  }
 }
 
 .page-intro {
+  margin: 0 auto;
   .set-fonts(300; 24px; 33px);
   font-style: normal;
   color: @white;
   text-align: center;
-  margin: 0 auto;
-  padding: 120px 20px 42px 18px;
+}
+
+.page-intro__catalog {
+  padding: 90px 20px 80px 20px;
+}
+
+.page-intro__form {
+  padding: 90px 20px 50px 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -40,11 +52,24 @@
     margin: 0;
   }
 
-  @media (min-resolution: 1.5dppx) {
-    .intro-background {
-      top: -110px;
+  .page-intro__catalog {
+    padding-bottom: 128px;
+  }
+
+  .page-intro__form {
+    padding-bottom: 63px;
+  }
+
+  .page-header__page-intro {
+    background-image: url("../img/back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-color: @background-grey;
+    background-size: cover;
+    top: -109px;
+
+    @media (min-resolution: 2dppx) {
       background-image: url("../img/back-mobile-big@2x.jpg");
-      background-size: 729px auto;
+      background-size: cover;
     }
   }
 }
@@ -56,13 +81,26 @@
   }
 
   .page-intro {
-    padding: 200px 100px 90px 100px;
+    padding: 172px 100px 90px 100px;
     margin: 0;
   }
 
-  @media (min-resolution: 1.5dppx) {
-    .intro-background {
-      top: -140px;
+  .page-intro__catalog {
+    padding-bottom: 86px;
+  }
+
+  .page-intro__form {
+    padding-bottom: 86px;
+  }
+
+  .page-header__page-intro {
+    background-image: url("../img/back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-color: @background-grey;
+    background-size: cover;
+    top: -109px;
+
+    @media (min-resolution: 2dppx) {
       background-image: url("../img/back-mobile-large@2x.jpg");
       background-size: cover;
     }

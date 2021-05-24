@@ -58,7 +58,7 @@
             <a class="link-menu" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a class="link-menu" href="htmlacademy.ru">HTML Academy</a>
+            <a class="link-menu" href="https://htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
       </div>
@@ -129,15 +129,21 @@
           </li>
         </ul>
         <div class="features__screen-mobile">
-          <img src="img/iphone-screen-mobile.png" width="157" height="280" alt="Скиншот приложения PINK">
-        </div>
-        <div class="features__screen-tablet">
-          <img src="img/iphone-screen-tablet.png" width="268" height="481" alt="Скиншот приложения PINK">
+          <picture>
+            <source media="(min-width: 660px)" srcset="img/iphone-screen-tablet@1x.png 1x, img/iphone-screen-tablet@2x.png 2x">
+            <img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@1x.png 1x, img/iphone-screen-mobile@2x.png 2x" alt="Скиншот приложения PINK">
+          </picture>
         </div>
         <div class="features__screen-desctop">
-          <img class="screen" src="img/iphone-screen-desk1.png" width="186" height="301" alt="Скиншот приложения PINK">
-          <img src="img/iphone-screen-desk2.png" width="186" height="301" alt="Скиншот приложения PINK">
-          <img src="img/iphone-screen-desk3.png" width="186" height="301" alt="Скиншот приложения PINK">
+          <picture class="features__screen">
+            <img src="img/iphone-screen-desk1@1x.png" srcset="img/iphone-screen-desk1@1x.png 1x, img/iphone-screen-desk1@2x.png 2x" alt="Скиншот приложения PINK">
+          </picture>
+          <picture class="features__screen">
+            <img class="features__screen" src="img/iphone-screen-desk2@1x.png" srcset="img/iphone-screen-desk2@1x.png 1x, img/iphone-screen-desk2@2x.png 2x" alt="Скиншот приложения PINK">
+          </picture>
+          <picture class="features__screen">
+            <img class="features__screen" src="img/iphone-screen-desk3@1x.png" srcset="img/iphone-screen-desk3@1x.png 1x, img/iphone-screen-desk3@2x.png 2x" alt="Скиншот приложения PINK">
+          </picture>
         </div>
       </div>
 
@@ -268,7 +274,7 @@
           <p class="contacts__text">Приезжайте в гости:</p>
           <address class="address">ул. Большая Конюшенная, 19/8</address>
         </div>
-      </div>
+        </div>
       <div class="contacts__maps">
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
         width="320" height="200" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">

@@ -1,102 +1,169 @@
-.popular-photo {
+.popular-photo__image {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  display: block;
+}
+
+.popular-photo__content {
+  position: relative;
+  display: block;
+  height: 137px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 20px;
+    width: 140px;
+    height: 36px;
+    background-image: url("../img/photo-day.png");
+  }
+}
+
+.photo-card-large {
+  width: 100%;
+  height: 100%;
+}
+
+.popular-photo__description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 280px;
   background-color: @background-light;
+}
 
-  .popular-photo__image {
-    margin-bottom: 20px;
-    padding-bottom: 26px;
+.popular-photo__autor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    .popular-photo__content {
-      .photo-card-large {
-        width: 100%;
-      }
+.popular-photo__name {
+  margin: 0;
+  padding-left: 20px;
+  .set-fonts(700; 14px; 24px);
+}
 
-      .photo-card-large--tablet {
-        display: none;
-      }
+.popular-photo__time {
+  margin: 0;
+  .set-fonts(300; 12px; 24px);
+  text-transform: uppercase;
+}
 
-      .photo-card-large--desktop {
-        display: none;
-      }
-    }
+.popular-photo__paragraph {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  .set-fonts(400; 14px; 24px);
+}
 
-    .popular-photo__description {
-      border: none;
-      padding: 0 20px;
+.popular-photo__like {
+  position: relative;
+  padding-left: 48px;
+  padding-bottom: 20px;
+  .set-fonts(400; 14px; 24px);
+  color: @pink-clr;
+  text-transform: uppercase;
 
-      .popular-photo__name {
-        .set-fonts(700; 14px; 24px);
-      }
-
-      .popular-photo__time {
-        .set-fonts(300; 12px; 24px);
-      }
-
-      .popular-photo__paragraph {
-        .set-fonts(400; 14px; 24px);
-      }
-
-      .popular-photo__like {
-        .set-fonts(400; 14px; 24px);
-        color: @pink-clr;
-        padding-left: 28px;
-        position: relative;
-
-        &::before {
-          position: absolute;
-          content: "";
-          width: 13px;
-          height: 12px;
-          background-image: url("../img/heart.svg");
-          background-repeat: no-repeat;
-          top: 2px;
-          left: 1px;
-        }
-      }
-    }
+  &::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 20px;
+    width: 13px;
+    height: 12px;
+    background-image: url("../img/heart.svg");
+    background-repeat: no-repeat;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .popular-photo {
-    .popular-photo__image {
-      display: block;
-      box-sizing: border-box;
+  .popular-photo__image {
+    width: 660px;
+  }
 
-      .popular-photo__content {
-        .photo-card-large--mobile {
-          display: none;
-        }
+  .popular-photo__content {
+    position: relative;
+    height: 509px;
 
-        .photo-card-large--tablet {
-          display: block;
-        }
-
-        .photo-card-large--desktop {
-          display: none;
-        }
-      }
+    &::before {
+      top: 55px;
     }
+  }
+
+  .popular-photo__description {
+    width: 640px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .popular-photo__autor {
+    order: 1;
+    margin-top: 7px;
+  }
+
+  .popular-photo__like {
+    order: 2;
+    margin-top: 20px;
+    display: inline-block;
+    align-self: flex-end;
+    padding-right: 40px;
+
+    &::before {
+      top: 6px;
+      left: 50px;
+    }
+  }
+
+  .popular-photo__paragraph {
+    order: 3;
   }
 }
 
+
 @media (min-width: @desktop-width) {
-  .popular-photo {
-    .popular-photo__image {
-      .popular-photo__content {
-        .photo-card-large--mobile {
-          display: none;
-        }
+  .popular-photo__image {
+    width: 1200px;
+  }
 
-        .photo-card-large--tablet {
-          display: none;
-        }
+  .popular-photo__content {
+    position: relative;
+    height: 509px;
 
-        .photo-card-large--desktop {
-          display: block;
-        }
-      }
+    &::before {
+      top: 55px;
+      right: 130px;
     }
   }
 
+  .popular-photo__description {
+    width: 940px;
+    padding-bottom: 30px;
+  }
 
+  .popular-photo__paragraph {
+    margin-bottom: 0;
+  }
+
+  .popular-photo__like {
+    order: 2;
+    margin-top: 20px;
+    display: inline-block;
+    align-self: flex-end;
+    padding-right: 60px;
+    .set-fonts(400; 12px; 24px);
+
+    &::before {
+      top: 6px;
+      left: 159px;
+    }
+  }
 }

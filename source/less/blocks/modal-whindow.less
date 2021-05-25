@@ -1,5 +1,14 @@
 .modal {
-  display: none;
+  position: fixed;
+  top: 120px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 320px;
+  background-color: @white;
+  text-align: center;
+  padding-top: 30px;
 }
 
 .modal__title {
@@ -12,8 +21,27 @@
   color: @grey-clr;
 }
 
-.button {
+.modal__button {
+  margin-top: 50px;
+  margin-bottom: 50px;
   .green-button();
-  padding: 23px 0 23px 0;
+  text-transform: uppercase;
+  padding: 20px 0 20px 0;
   width: 276px;
+}
+
+.modal__success {
+  display: none;
+}
+
+.modal__failure {
+  display: none;
+}
+
+.modal__show {
+  display: block;
+}
+
+.modal__button-container {
+  background-color: @background-light;
 }

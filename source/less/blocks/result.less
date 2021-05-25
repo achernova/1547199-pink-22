@@ -11,12 +11,14 @@
   .result {
     display: block;
     padding-left: 330px;
+    margin: 0 auto;
     margin-bottom: 110px;
+    width: 640px;
     box-sizing: border-box;
   }
 
   .result__wrapper {
-    width: 640px;
+    width: 660px;
   }
 
   .result__title {
@@ -46,49 +48,55 @@
 
   .result__link {
     .set-fonts(400; 14px; 24px);
+    cursor: pointer;
   }
 }
 
 @media (min-width: @desktop-width) {
   .result {
     display: block;
-    margin-left: 150px;
-    padding-bottom: 40px;
+    margin: 0 auto;
+    margin-bottom: 170px;
+    padding-left: 479px;
+    padding-bottom: 120px;
+    padding-top: 42px;
+    background-color: @background-light;
   }
 
   .result__wrapper {
-    width: 940px;
+    width: 1200px;
+    background-color: @background-light;
+  }
 
-    .result__title {
-      .set-fonts(700; 30px; 30px);
-      width: 534px;
-      margin-top: 5px;
-      margin-left: 20px;
-      position: relative;
+  .result__title {
+    .set-fonts(700; 30px; 30px);
+    width: 534px;
+    margin-top: 5px;
+    margin-left: 20px;
+    position: relative;
 
-      &::before {
-        position: absolute;
-        content: "";
-        width: 298px;
-        height: 345px;
-        background-image: url("../img/time-desktop.png");
-        background-repeat: no-repeat;
-        left: -370px;
-        top: -99px;
-      }
+    &::before {
+      position: absolute;
+      content: "";
+      left: -369px;
+      top: -99px;
+      width: 298px;
+      height: 345px;
+      background-image: url("../img/time-desktop.png");
+      background-repeat: no-repeat;
     }
+  }
 
-    .result__intro {
-      .set-fonts(400; 18px; 30px);
-      width: 534px;
-      margin-top: 23px;
-      margin-left: 20px;
-      margin-bottom: 30px;
-    }
+  .result__intro {
+    .set-fonts(400; 18px; 30px);
+    width: 534px;
+    margin-top: 23px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
 
-    .result__link {
-      .set-fonts(400; 18px; 30px);
-      margin-left: 20px;
-    }
+  .result__link {
+    .set-fonts(400; 18px; 30px);
+    margin-left: 20px;
   }
 }

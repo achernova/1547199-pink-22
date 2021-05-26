@@ -1,32 +1,30 @@
-// Начните писать стили здесь
-@import url("variables.less");
-@import url("mixins.less");
-@import url("fonts.less");
-@import url("global.less");
+// Global
+@import "global/fonts.less";
+@import "global/colors.less";
+@import "global/viewports.less";
+@import "global/mixins.less";
+@import "global/visually-hidden.less";
+@import "global/container.less";
 
-/*blocks*/
-@import url("blocks/page-header.less");
-@import url("blocks/page-main.less");
-@import url("blocks/main-nav.less");
-@import url("blocks/download.less");
-@import url("blocks/features.less");
-@import url("blocks/result.less");
-@import url("blocks/review.less");
-@import url("blocks/slider-buttons.less");
-@import url("blocks/price.less");
-@import url("blocks/price-slider.less");
-@import url("blocks/table.less");
-@import url("blocks/contacts.less");
-@import url("blocks/contest-form.less");
-@import url("blocks/form.less");
-@import url("blocks/form-personal.less");
-@import url("blocks/form-checkbox.less");
-@import url("blocks/form-contacts.less");
-@import url("blocks/form-apps.less");
-@import url("blocks/form-textarea.less");
-@import url("blocks/modal-whindow.less");
-@import url("blocks/catalog.less");
-@import url("blocks/popular-photo.less");
-@import url("blocks/catalog-list.less");
-@import url("blocks/post-filter.less");
-@import url("blocks/page-footer.less");
+// All pages
+@import "blocks/page.less";
+
+// Main blocks all pages
+@import "blocks/page-header.less";
+@import "blocks/page-main.less";
+@import "blocks/page-footer.less";
+
+// Index html
+
+@import "blocks/main-nav.less";
+@import "blocks/download.less";
+@import "blocks/features.less";
+@import "blocks/reviews.less";
+@import "blocks/price.less";
+@import "blocks/contacts.less";
+@import "blocks/form.less";
+@import "blocks/photo.less";
+@import "blocks/upload.less";
+@import "blocks/research.less";
+@import "blocks/social.less";
+@import "blocks/modal.less";

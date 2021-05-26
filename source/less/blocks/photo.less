@@ -1,0 +1,203 @@
+.photo__item {
+  margin: 0;
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 21px;
+  }
+}
+
+.photo__like {
+  position: relative;
+  padding: 11px 0 17px 49px;
+  margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.photo__item-scale {
+  display: block;
+  height: 180px;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .photo__item-scale-first {
+    .size(300px; 300px);
+  }
+
+  .photo__item-scale-second {
+    .size(300px; 300px);
+  }
+
+  .photo__item-scale-third {
+    .size(300px; 300px);
+  }
+
+
+  .photo__item-scale-forth {
+    .size(300px; 300px);
+  }
+
+  .photo__item-scale-fifth {
+    .size(300px; 300px);
+  }
+
+  .photo__item-scale-six {
+    .size(300px; 300px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo__item-scale-first {
+    .size(300px; 400px);
+  }
+
+  .photo__item-scale-second {
+    .size(300px; 400px);
+  }
+
+  .photo__item-scale-third {
+    .size(300px; 400px);
+  }
+
+
+  .photo__item-scale-forth {
+    .size(300px; 400px);
+  }
+
+  .photo__item-scale-fifth {
+    .size(300px; 400px);
+  }
+
+  .photo__item-scale-six {
+    .size(300px; 400px);
+  }
+}
+
+.photo__info {
+  background-color: @grey-light;
+  position: relative;
+  min-height: 120px;
+
+  @media (min-width: @desktop-width) {
+    min-height: 156px;
+  }
+}
+
+.photo__like-button {
+  border: 0;
+  padding: 0;
+  .size(13px;12px);
+  background-image: url("../img/heart.svg");
+  position: absolute;
+  left: 17px;
+  bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 257px;
+    bottom: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: 256px;
+    bottom: -30px;
+  }
+}
+
+.photo__author {
+  margin: 0;
+  padding-left: 17px;
+  padding-top: 18px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-top: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 27px;
+    padding-top: 24px;
+  }
+}
+
+.photo__text {
+  .font(14px; 400; 24px);
+  color: @dark-light-blue;
+  margin: 0;
+  padding-left: 17px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    min-height: 107px;
+
+    & .photo__tablet {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 27px;
+    min-height: 46px;
+  }
+}
+
+.photo__author-name {
+  .font(14px; 700; 24px);
+  color: @dark-light-blue;
+}
+
+
+.photo__time {
+  .font(12px; 300; 24px);
+  color: @dark-light-blue;
+  text-transform: uppercase;
+}
+
+.photo__like-counter {
+  .font(12px; 400; 24px);
+  color: @pink;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .photo__like-counter {
+    position: absolute;
+    bottom: 23px;
+    left: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo__like-counter {
+    position: absolute;
+    bottom: -38px;
+    left: 28px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .photo {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    column-gap: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    column-gap: 20px;
+    row-gap: 32px;
+  }
+}

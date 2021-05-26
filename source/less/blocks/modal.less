@@ -1,5 +1,5 @@
 .modal--error {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   background-color: @white;
@@ -75,7 +75,7 @@
 }
 
 .modal--success {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   background-color: @white;
@@ -188,14 +188,6 @@
   @media (min-width: @desktop-width) {
     .size(460px; 63px);
   }
-}
-
-.modal--error {
-  display: none;
-}
-
-.modal--success {
-  display: none;
 }
 
 .modal__error-message,

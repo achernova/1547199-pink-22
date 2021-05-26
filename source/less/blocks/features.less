@@ -1,179 +1,264 @@
-.features__intro {
-  box-sizing: border-box;
-  color: @grey-clr;
-  .set-fonts(300; 24px; 29px);
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: 20px;
-}
+.features {
+  min-height: 1000px;
+  position: relative;
+  margin-top: 3px;
 
-.features__intro-p {
-  box-sizing: border-box;
-  color: @grey-clr;
-  .set-fonts(300; 24px; 29px);
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: 20px;
-}
+  @media (min-width: @tablet-width) {
+    min-height: 853px;
+  }
 
-.features-list__grid {
-    background-image: url(../img/grey-background.svg);
+  @media (min-width: @desktop-width) {
+    min-height: 1050px;
+    z-index: -2;
+    background-image: url("../img/features-background.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0 auto;
-    padding-top: 40px;
-
-  .features__list {
-    .reset-list .list();
-    text-align: center;
-    padding: 0 20px;
-    margin: auto;
-    margin-top: 95px;
-    display: flex;
-    flex-direction: column;
-
-
-    .features__item {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 28px;
-
-      .features__title {
-        .set-fonts(700; 18px; 24px);
-        color: @black;
-        margin: 0;
-        margin-bottom: 15px;
-      }
-
-      .features__description {
-        .set-fonts(400; 14px; 24px);
-        color: @grey-clr;
-        margin: 0;
-      }
-    }
-  }
-
-  .features__screen-mobile {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .features__screen-tablet {
-    display: none;
-  }
-
-  .features__screen-desctop {
-    display: none;
+    background-position: 0 270px;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .features__wrapper {
-    width: 640px;
-    margin: 0 auto;
-    margin-top: -62px;
+.features .features__container {
+  position: relative;
+  background-image: url("../img/features-background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 100px;
+  padding-bottom: 285px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/features-background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 189px;
+    padding-bottom: 9px;
   }
 
-  .features__intro {
-    .set-fonts(300; 40px; 54px);
-    text-align: center;
-    padding-bottom: 0;
+  @media (min-width: @desktop-width) {
+    background-image: none;
+  }
+}
+
+.features__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: @white;
+}
+
+.features__intro {
+  .font(24px; 300; 29px);
+  color: @dark-light-blue;
+  background-color: @white;
+  margin: 0;
+  text-align: center;
+  margin-top: 38px;
+
+  @media (min-width: @tablet-width) {
+    .font(40px; 300; 54px);
+    margin-top: 44px;
   }
 
-  .features__intro-p {
-    .set-fonts(300; 40px; 54px);
-    text-align: center;
-    width: 340px;
-    margin-left: 150px;
+  @media (min-width: @desktop-width) {
+    .font(50px; 300; 68px);
+    margin-top: 60px;
+  }
+}
+
+.features__intro:nth-of-type(2) {
+  margin-top: 28px;
+
+  @media (min-width: @tablet-width) {
     margin-top: 0;
   }
+}
 
-  .features-list__grid {
-    display: flex;
+.features__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  margin-top: 115px;
+  padding: 0;
 
-    .features__list {
-      width: 310px;
-      order: 2;
-      margin: 0;
-      margin-left: 20px;
-      text-align: left;
-      margin-top: 65px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 157px;
+    height: 320px;
+    background-image: url("../img/screenshot-hellow.png");
+    left: 82px;
+    top: 721px;
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/screenshot-hellow-t.png");
+      left: 20px;
+      top: 242px;
+      width: 268px;
+      height: 547px;
+      z-index: 0;
     }
 
-    .features__screen-mobile {
+    @media (min-width: @desktop-width) {
+      background-image: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    align-items: flex-end;
+    margin-top: 105px;
+    margin-right: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 105px;
+    margin-right: 0;
+  }
+}
+
+.features__item {
+  min-height: 96px;
+
+  @media (min-width: @tablet-width) {
+    width: 310px;
+
+    & .features__desktop {
       display: none;
     }
 
-    .features__screen-tablet {
+    @media (min-width: @desktop-width) {
+      & .features__desktop {
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 309px;
+    padding-left: 25px;
+  }
+}
+
+.features__title {
+  .font(18px; 700; 24px);
+  color: @black;
+  margin: 0;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 310px;
+    margin-bottom: 12px;
+    margin-left: 42px;
+    text-align: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 240px;
+    text-align: center;
+    .font(30px; 700; 30px);
+    margin: 0;
+    margin-bottom: 22px;
+    padding-left: 5px;
+  }
+}
+
+.features__description {
+  .font(14px; 400; 24px);
+  color: @dark-light-blue;
+  margin: 0;
+  margin-top: 12px;
+  text-align: center;
+  margin-bottom: 31px;
+
+  & .features__desktop {
+    display: none;
+  }
+
+  & .features__tablet {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 310px;
+    margin-left: 42px;
+    text-align: start;
+    margin-top: 0;
+    margin-right: 43px;
+    margin-bottom: 34px;
+
+    & .features__tablet {
       display: block;
-      order: 1;
-      margin-left: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    width: 252px;
+    .font(18px; 400; 30px);
+    margin-top: 0;
+    margin-right: 5px;
+    margin-bottom: 0;
+    margin-left: 0;
+
+    & .features__desktop {
+      display: block;
     }
 
-    .features__screen-desctop {
+    & .features__tablet {
       display: none;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .features__wrapper {
-    width: 940px;
+  .features__item:nth-of-type(1)::before {
+    content: "";
+    width: 300px;
+    height: 490px;
+    position: absolute;
+    background-image: url("../img/mood-up.png");
+    top: -47px;
+    left: -5px;
+    z-index: -1;
+  }
 
-    .features__intro {
-      .set-fonts(300; 50px; 68px);
-      width: 780px;
-      margin-top: 15px;
+  .features__item:nth-of-type(2) {
+    padding-left: 45px;
+
+    & .features__tablet {
+      display: none;
     }
 
-    .features__intro-p {
-      .set-fonts(300; 50px; 68px);
-      width: 700px;
-      margin-left: 120px;
+    &::before {
+      content: "";
+      width: 300px;
+      height: 490px;
+      position: absolute;
+      background-image: url("../img/world-up.png");
+      top: -47px;
+      left: 315px;
+      z-index: -1;
     }
+  }
 
-    .features-list__grid {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
+  .features__item:nth-of-type(3) {
+    margin-left: 20px;
 
-      .features__list {
-        order: 2;
-        display: grid;
-        grid-template-columns: 252px 252px 252px;
-        gap: 68px;
-        box-sizing: border-box;
-        margin: 0;
-
-        .features__item {
-          text-align: center;
-
-          .features__title {
-            .set-fonts(700; 30px; 30px);
-            width: 220px;
-            margin-bottom: 23px;
-            margin-left: 20px;
-          }
-
-          .features__description {
-            .set-fonts(400; 18px; 30px);
-            width: 235px;
-          }
-        }
-      }
-
-      .features__screen-tablet {
-        display: none;
-      }
-
-      .features__screen-desctop {
-        display: grid;
-        grid-template-columns: 252px 252px 252px;
-        gap: 68px;
-        order: 1;
-        margin: 0 auto;
-        margin-left: 50px;
-        margin-bottom: 63px;
-      }
+    &::before {
+      content: "";
+      width: 300px;
+      height: 490px;
+      position: absolute;
+      background-image: url("../img/friends-up.png");
+      top: -47px;
+      left: 635px;
+      z-index: -1;
     }
   }
 }
